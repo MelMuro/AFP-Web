@@ -1,0 +1,50 @@
+  
+#fullFondo {
+    background-image: url('/src/assets/Group\ 83.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-screen;
+  }
+
+
+  section#bannerInfo {
+    padding-top: 55%;
+}
+
+#fullFondo {
+  background-image: url('/src/assets/Group\ 83.png');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85rem;
+}
+
+.restaurant:not(:last-child){
+  margin-bottom:1vw;
+}
+
+
+#listRestaurants:after {
+  content: "";
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  background-color: transparent;
+  border: 2px solid #991B1B;
+  z-index: 0;
+  right: -4vw;
+  top: -3vw;
+  bottom: 0;
+}
+
+
+
+  /*#mapPark {
+    background-image: url('/src/assets/Mapa.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }*/
+  
