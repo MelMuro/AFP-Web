@@ -106,7 +106,7 @@ const Footer = () => {
 							<div className='basis-1/2'>
 								<img
 									src={fog}
-									alt='No se'
+									alt='Fog'
 									className='object-cover w-full'
 								/>
 							</div>
