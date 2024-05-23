@@ -1,14 +1,11 @@
-import React from 'react';
 import WhiteLogo from '../assets/WhiteLogo.png';
-import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
 
 const Home = () => {
 	return (
 		<>
-			{/*HERO Father container*/}
-			<section id='fullFondo' className='w-screen h-screen'>
+			<section id='fullBackground' className='w-screen h-screen'>
 				<section
 					id='bannerInfo'
 					className='flex items-center justify-center px-28 '
@@ -35,8 +32,6 @@ const Home = () => {
 				</section>
 			</section>
 
-			{/*MAP Container*/}
-
 			<section className='mx-20 my-40'>
 				<h1 className='block font-bold font-jura text-5xl text-center'>
 					Un lugar para ti, para todos
@@ -50,32 +45,18 @@ const Home = () => {
 						className='relative w-1/4 h-fit mx-12 p-8 text-center bg-red-800 text-white'
 					>
 						{/*LIST OF RESTAURANTS*/}
-						<p className='restaurant'>Restaurant 1</p>
-						<p className='restaurant'>Restaurant 2</p>
-						<p className='restaurant'>Restaurant 3</p>
-						<p className='restaurant'>Restaurant 4</p>
-						<p className='restaurant'>Restaurant 5</p>
-						<p className='restaurant'>Restaurant 6</p>
-						<p className='restaurant'>Restaurant 7</p>
+						<ul>
+							<li className='restaurant'>Restaurant 1</li>
+							<li className='restaurant'>Restaurant 2</li>
+							<li className='restaurant'>Restaurant 3</li>
+							<li className='restaurant'>Restaurant 4</li>
+							<li className='restaurant'>Restaurant 5</li>
+							<li className='restaurant'>Restaurant 6</li>
+							<li className='restaurant'>Restaurant 7</li>
+						</ul>
 					</div>
 				</div>
 			</section>
-
-			{/*SCHEDULE*/}
-			<section className="relative">
-				<div className="relative p-10 border-red-800 w-1/3 border-2">
-					<h2>Horario</h2>
-					<p>Lunes a Viernes - 12:00pm a 10:00pm</p>
-					<p>Sabados y Domingos - 12:00pm a 12:00am</p>
-
-					<div>
-            <img className="absolute right-0 bottom-1/2" src={gyoza} alt="Gyoza"/>
-        </div>
-				</div>
-
-				
-			</section>
-
 		</>
 	);
 };

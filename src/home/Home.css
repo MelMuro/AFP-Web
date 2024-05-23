@@ -1,18 +1,8 @@
-  
-#fullFondo {
-    background-image: url('/src/assets/Group\ 83.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: fit-screen;
-  }
-
-
-  section#bannerInfo {
+section#bannerInfo {
     padding-top: 55%;
 }
 
-#fullFondo {
+#fullBackground {
   background-image: url('/src/assets/Group\ 83.png');
   background-position: top;
   background-size: cover;
@@ -38,13 +28,4 @@
   bottom: 0;
 }
 
-
-
-  /*#mapPark {
-    background-image: url('/src/assets/Mapa.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-  }*/
   

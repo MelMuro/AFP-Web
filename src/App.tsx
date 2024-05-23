@@ -2,11 +2,15 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getRestaurantsQuery } from './api/sample-query';
 import Home from './home/Home';
 import NavMenu from './common/NavMenu';
+import './index.css';
 
 function App() {
 	return (
 		<QueryClientProvider client={new QueryClient()}>
 			<div className='card'>
+			<NavMenu/>
+				<Home/>
+				
 				<SampleComponent />
 			</div>
 		</QueryClientProvider>
