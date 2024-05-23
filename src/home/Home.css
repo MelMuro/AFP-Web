@@ -5,6 +5,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: fit-screen;
+    position: relative;
+    z-index:1;
+  }
+
+  #detailsSection{
+    background-image: url('/src/assets/Scales.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-screen;
+    margin-top: -5rem;
+    z-index:0;
   }
 
 
@@ -25,13 +37,13 @@
 }
 
 
-#listRestaurants:after {
+#listRestaurants:before {
   content: "";
   position: absolute;
   width: 15vw;
   height: 15vw;
   background-color: transparent;
-  border: 2px solid #991B1B;
+  border: 2px solid #932A2A;
   z-index: 0;
   right: -4vw;
   top: -3vw;

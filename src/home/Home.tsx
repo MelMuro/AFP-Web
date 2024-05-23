@@ -3,6 +3,7 @@ import WhiteLogo from '../assets/WhiteLogo.png';
 import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
+import scales from '../assets/Scales.png';
 
 const Home = () => {
 	return (
@@ -36,46 +37,48 @@ const Home = () => {
 			</section>
 
 			{/*MAP Container*/}
+			<div id="detailsSection">
+				<section className='px-20 py-48'>
+					<h1 className='block font-bold font-jura text-5xl text-center'>
+						Un lugar para ti, para todos
+					</h1>
 
-			<section className='mx-20 my-40'>
-				<h1 className='block font-bold font-jura text-5xl text-center'>
-					Un lugar para ti, para todos
-				</h1>
+					<div className='flex center justify-evenly items-center my-10'>
+						<ParkMap />
 
-				<div className='flex center justify-evenly items-center my-10'>
-					<ParkMap />
-
-					<div
-						id='listRestaurants'
-						className='relative w-1/4 h-fit mx-12 p-8 text-center bg-red-800 text-white'
-					>
-						{/*LIST OF RESTAURANTS*/}
-						<p className='restaurant'>Restaurant 1</p>
-						<p className='restaurant'>Restaurant 2</p>
-						<p className='restaurant'>Restaurant 3</p>
-						<p className='restaurant'>Restaurant 4</p>
-						<p className='restaurant'>Restaurant 5</p>
-						<p className='restaurant'>Restaurant 6</p>
-						<p className='restaurant'>Restaurant 7</p>
+						<div
+							id='listRestaurants'
+							className='relative w-1/4 h-fit mx-12 p-8 text-center bg-redDefault text-white z-10'
+						>
+							{/*LIST OF RESTAURANTS*/}
+							<p className='restaurant'>Restaurant 1</p>
+							<p className='restaurant'>Restaurant 2</p>
+							<p className='restaurant'>Restaurant 3</p>
+							<p className='restaurant'>Restaurant 4</p>
+							<p className='restaurant'>Restaurant 5</p>
+							<p className='restaurant'>Restaurant 6</p>
+							<p className='restaurant'>Restaurant 7</p>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			{/*SCHEDULE*/}
-			<section className="relative">
-				<div className="relative p-10 border-red-800 w-1/3 border-2">
-					<h2>Horario</h2>
-					<p>Lunes a Viernes - 12:00pm a 10:00pm</p>
-					<p>Sabados y Domingos - 12:00pm a 12:00am</p>
+				{/*SCHEDULE*/}
+				<section className='relative pb-40 px-12 py-'>
+					<div className='p-14 border-redDefault w-2/5 border-2'>
+						<h2>Horario</h2>
+						<p>Lunes a Viernes - 12:00pm a 10:00pm</p>
+						<p>Sabados y Domingos - 12:00pm a 12:00am</p>
 
-					<div>
-            <img className="absolute right-0 bottom-1/2" src={gyoza} alt="Gyoza"/>
-        </div>
-				</div>
-
-				
-			</section>
-
+						<div>
+							<img
+								className='absolute right-0 bottom-0 w-3/5'
+								src={gyoza}
+								alt='Gyoza'
+							/>
+						</div>
+					</div>
+				</section>
+			</div>
 		</>
 	);
 };

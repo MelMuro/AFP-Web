@@ -2,18 +2,24 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getRestaurantsQuery } from './api/sample-query';
 import Home from './home/Home';
 import NavMenu from './common/NavMenu';
+import '../src/home/Home.css';
+
 
 function App() {
 	return (
-		<QueryClientProvider client={new QueryClient()}>
+<>
+		{/*<QueryClientProvider client={new QueryClient()}>
 			<div className='card'>
 				<SampleComponent />
 			</div>
-		</QueryClientProvider>
+		</QueryClientProvider> */}
+			<NavMenu/>
+		<Home/>
+		</>
 	);
 }
 
-const SampleComponent = () => {
+/*const SampleComponent = () => {
 	const { isPending, error, data } = getRestaurantsQuery();
 
 	if (isPending) {
@@ -35,6 +41,6 @@ const SampleComponent = () => {
 			})}
 		</ul>
 	);
-};
+};*/
 
 export default App;
