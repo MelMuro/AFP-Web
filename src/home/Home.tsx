@@ -1,4 +1,3 @@
-import React from 'react';
 import WhiteLogo from '../assets/WhiteLogo.png';
 import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
@@ -62,20 +61,21 @@ const Home = () => {
 			</section>
 
 			{/*SCHEDULE*/}
-			<section className="relative">
-				<div className="relative p-10 border-red-800 w-1/3 border-2">
+			<section className='relative'>
+				<div className='relative p-10 border-red-800 w-1/3 border-2'>
 					<h2>Horario</h2>
 					<p>Lunes a Viernes - 12:00pm a 10:00pm</p>
 					<p>Sabados y Domingos - 12:00pm a 12:00am</p>
 
 					<div>
-            <img className="absolute right-0 bottom-1/2" src={gyoza} alt="Gyoza"/>
-        </div>
+						<img
+							className='absolute right-0 bottom-1/2'
+							src={gyoza}
+							alt='Gyoza'
+						/>
+					</div>
 				</div>
-
-				
 			</section>
-
 		</>
 	);
 };

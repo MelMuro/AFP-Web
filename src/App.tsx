@@ -1,7 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getRestaurantsQuery } from './api/sample-query';
-import Home from './home/Home';
-import NavMenu from './common/NavMenu';
 
 function App() {
 	return (
