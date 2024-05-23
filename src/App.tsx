@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { getRestaurantsQuery } from './api/sample-query';
+import Footer from './common/Footer';
 
 function App() {
 	return (
@@ -7,6 +8,7 @@ function App() {
 			<div className='card'>
 				<SampleComponent />
 			</div>
+			<Footer />
 		</QueryClientProvider>
 	);
 }
