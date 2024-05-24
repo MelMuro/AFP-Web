@@ -3,6 +3,7 @@ import { getRestaurantsQuery } from './api/sample-query';
 import Home from './home/Home';
 import NavMenu from './common/NavMenu';
 import './index.css';
+import Footer from './common/Footer';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				
 				<SampleComponent />
 			</div>
+			<Footer />
 		</QueryClientProvider>
 	);
 }
