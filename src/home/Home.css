@@ -1,43 +1,33 @@
-  
-#fullFondo {
-    background-image: url('/src/assets/Group\ 83.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: fit-screen;
-    position: relative;
-    z-index:1;
-  }
-
-  #detailsSection{
-    background-image: url('/src/assets/Scales.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: fit-screen;
-    margin-top: -5rem;
-    z-index:0;
-  }
-
-
-  section#bannerInfo {
+section#bannerInfo {
     padding-top: 55%;
 }
 
-#fullFondo {
+#fullBackground {
   background-image: url('/src/assets/Group\ 83.png');
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   height: 85rem;
+  z-index:9;
 }
+
+#detailsSection{
+  background-image: url('/src/assets/Scales.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: fit-screen;
+  margin-top: -5rem;
+  z-index:0;
+}
+
 
 .restaurant:not(:last-child){
   margin-bottom:1vw;
 }
 
 
-#listRestaurants:before {
+#listRestaurants:after {
   content: "";
   position: absolute;
   width: 15vw;
@@ -50,13 +40,4 @@
   bottom: 0;
 }
 
-
-
-  /*#mapPark {
-    background-image: url('/src/assets/Mapa.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-  }*/
   

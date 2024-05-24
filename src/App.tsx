@@ -3,6 +3,7 @@ import { getRestaurantsQuery } from './api/sample-query';
 import Home from './home/Home';
 import NavMenu from './common/NavMenu';
 import '../src/home/Home.css';
+import Footer from './common/Footer';
 
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
 		</QueryClientProvider> */}
 			<NavMenu/>
 		<Home/>
+		<Footer/>
 		</>
 	);
 }
+
 
 /*const SampleComponent = () => {
 	const { isPending, error, data } = getRestaurantsQuery();

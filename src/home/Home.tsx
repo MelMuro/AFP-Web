@@ -1,15 +1,12 @@
-import React from 'react';
 import WhiteLogo from '../assets/WhiteLogo.png';
 import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
-import scales from '../assets/Scales.png';
 
 const Home = () => {
 	return (
 		<>
-			{/*HERO Father container*/}
-			<section id='fullFondo' className='w-screen h-screen'>
+			<section id='fullBackground' className='relative w-screen h-screen z-10'>
 				<section
 					id='bannerInfo'
 					className='flex items-center justify-center px-28 '
@@ -36,9 +33,8 @@ const Home = () => {
 				</section>
 			</section>
 
-			{/*MAP Container*/}
-			<div id="detailsSection">
-				<section className='px-20 py-48'>
+			<div id='detailsSection'>
+				<section className='px-20 py-44'>
 					<h1 className='block font-bold font-jura text-5xl text-center'>
 						Un lugar para ti, para todos
 					</h1>
@@ -48,21 +44,21 @@ const Home = () => {
 
 						<div
 							id='listRestaurants'
-							className='relative w-1/4 h-fit mx-12 p-8 text-center bg-redDefault text-white z-10'
+							className='relative w-1/4 h-fit mx-12 p-8 text-center bg-redDefault text-white'
 						>
-							{/*LIST OF RESTAURANTS*/}
-							<p className='restaurant'>Restaurant 1</p>
-							<p className='restaurant'>Restaurant 2</p>
-							<p className='restaurant'>Restaurant 3</p>
-							<p className='restaurant'>Restaurant 4</p>
-							<p className='restaurant'>Restaurant 5</p>
-							<p className='restaurant'>Restaurant 6</p>
-							<p className='restaurant'>Restaurant 7</p>
+							<ul>
+								<li className='restaurant'>Restaurant 1</li>
+								<li className='restaurant'>Restaurant 2</li>
+								<li className='restaurant'>Restaurant 3</li>
+								<li className='restaurant'>Restaurant 4</li>
+								<li className='restaurant'>Restaurant 5</li>
+								<li className='restaurant'>Restaurant 6</li>
+								<li className='restaurant'>Restaurant 7</li>
+							</ul>
 						</div>
 					</div>
 				</section>
 
-				{/*SCHEDULE*/}
 				<section className='relative pb-40 px-12 py-'>
 					<div className='p-14 border-redDefault w-2/5 border-2'>
 						<h2>Horario</h2>

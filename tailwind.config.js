@@ -1,15 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-	theme: {
-		colors: {
+	
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    colors: {
 			redDefault: "#932A2A",
 			blackDefault: "#16100C",
 			golden: "#DD9E55",
 			white: "#FFF",
 			default: "#16100C"
 		  },
-		extend: {}
-	},
-	plugins: []
-};
+    extend: {
+      backgroundImage: {
+        'ink': "url('./src/assets/Tinta 5.png')",
+      },
+      fontFamily: {
+        'montserrat': ['"Montserrat"'],
+        'jura': ['Rubik']
+      }
+    },
+  },
+  plugins: [],
+}
