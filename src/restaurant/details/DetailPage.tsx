@@ -11,7 +11,7 @@ const DetailPage = () => {
 				<img
 					className='absolute h-full w-full object-cover -z-10'
 					src={Fondo}
-					alt=''
+					alt='Fondo'
 				/>
 				<div className='container my-2 py-5 mx-auto flex flex-row items-center text-white z-10'>
 					<div className='basis-1/2 py-2 border-r-2 border-[#DD9E55]'>
