@@ -33,20 +33,16 @@ const Home = () => {
 				</section>
 			</section>
 
-			<div id='detailsSection'>
+			<section id='detailsSection'>
 				<section className='px-20 py-44'>
 					<h1 className='block font-bold font-jura text-5xl text-center'>
 						Un lugar para ti, para todos
 					</h1>
 
-					<div className='flex center justify-evenly items-center my-10'>
+					<section className='flex center justify-evenly items-center my-10'>
 						<ParkMap />
 
-						<div
-							id='listRestaurants'
-							className='relative w-1/4 h-fit mx-12 p-8 text-center bg-redDefault text-white'
-						>
-							<ul>
+							<ul id='listRestaurants' className='relative w-1/4 h-fit mx-12 p-8 text-center bg-redDefault text-white'>
 								<li className='restaurant'>Restaurant 1</li>
 								<li className='restaurant'>Restaurant 2</li>
 								<li className='restaurant'>Restaurant 3</li>
@@ -55,8 +51,8 @@ const Home = () => {
 								<li className='restaurant'>Restaurant 6</li>
 								<li className='restaurant'>Restaurant 7</li>
 							</ul>
-						</div>
-					</div>
+						
+					</section>
 				</section>
 
 				<section className='relative pb-40 px-12 py-'>
@@ -74,7 +70,7 @@ const Home = () => {
 						</div>
 					</div>
 				</section>
-			</div>
+			</section>
 		</>
 	);
 };
