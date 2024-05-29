@@ -1,4 +1,3 @@
-import './index.css';
 import fog from '../assets/dobleFog.png';
 import Face from '../assets/Face.svg';
 import Insta from '../assets/Insta.svg';

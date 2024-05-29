@@ -3,18 +3,17 @@ import Mail from '../../assets/Mail.svg';
 import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import Fondo from '../../assets/Imagen de Fondo.png';
-import React from 'react';
 
 const DetailPage = () => {
 	return (
 		<>
-			<section
-				style={
-					{ '--image-url': `url(${Fondo})` } as React.CSSProperties
-				}
-				className='bg-[image:var(--image-url)]'
-			>
-				<div className='container my-2 py-5 mx-auto flex flex-row items-center text-white'>
+			<section className='relative'>
+				<img
+					className='absolute h-full w-full object-cover -z-10'
+					src={Fondo}
+					alt=''
+				/>
+				<div className='container my-2 py-5 mx-auto flex flex-row items-center text-white z-10'>
 					<div className='basis-1/2 py-2 border-r-2 border-[#DD9E55]'>
 						<h2 className='font-jura font-bold'>City Wok</h2>
 						<span className='text-[#DD9E55]'>Comida China</span>
