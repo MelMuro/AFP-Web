@@ -8,7 +8,19 @@ section#bannerInfo {
   background-size: cover;
   background-repeat: no-repeat;
   height: 85rem;
+  z-index:9;
 }
+
+#detailsSection{
+  background-image: url('/src/assets/Scales.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: fit-screen;
+  margin-top: -5rem;
+  z-index:0;
+}
+
 
 .restaurant:not(:last-child){
   margin-bottom:1vw;
@@ -21,7 +33,7 @@ section#bannerInfo {
   width: 15vw;
   height: 15vw;
   background-color: transparent;
-  border: 2px solid #991B1B;
+  border: 2px solid #932A2A;
   z-index: 0;
   right: -4vw;
   top: -3vw;
