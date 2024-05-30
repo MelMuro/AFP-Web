@@ -1,18 +1,14 @@
-import Home from './home/Home';
-import NavMenu from './common/NavMenu';
-import './global-styles.css'
-import Footer from './common/Footer';
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import DetailPage from './restaurant/details/DetailPage';
 
 function App() {
 	return (
-<>
-	<NavMenu/>
-		<Home/>
-		<Footer/>
-		</>
+		<QueryClientProvider client={new QueryClient()}>
+			<div className='card'>
+				<DetailPage />
+			</div>
+		</QueryClientProvider>
 	);
 }
-
 
 export default App;
