@@ -9,7 +9,7 @@ const NavMenu = () => {
 					src={WhiteLogo}
 					className='md:w-28 sm:w-2'
 				/>
-				<nav className='flex md:gap-12 sm:justify-center sm:flex sm:flex-col sm:items-center md:flex-row md:items-center'>
+				<nav className='infoP flex md:gap-12 sm:justify-center sm:flex sm:flex-col sm:items-center md:flex-row md:items-center'>
 					<a href='#' className='sm:mb-4 md:mb-0'>
 						Restaurants
 					</a>

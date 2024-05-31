@@ -4,6 +4,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/global-styles.css"
   ],
   theme: {
     colors: {
@@ -11,7 +12,8 @@ export default {
 			blackDefault: "#16100C",
 			golden: "#DD9E55",
 			white: "#FFF",
-			default: "#16100C"
+			default: "#16100C",
+      gray: "#6D6D6D"
 		  },
     extend: {
       backgroundImage: {
@@ -19,7 +21,7 @@ export default {
       },
       fontFamily: {
         'montserrat': ['"Montserrat"'],
-        'jura': ['Rubik']
+        'jura': ['"Jura"', 'sans-serif'],
       }
     },
   },
