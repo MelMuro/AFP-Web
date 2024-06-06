@@ -2,11 +2,15 @@ import fog from '../../assets/dobleFog.png';
 import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import FormContact from './FormContact';
+import AddressMap from './AddressMap';
 
 const Footer = () => {
 	return (
 		<>
-			<div className='bg-blackDefault px-20 py-20'>
+			<section className='relative'>
+				<AddressMap />
+			</section>
+			<section className='bg-blackDefault px-20 py-20'>
 				<div className=' container mx-auto'>
 					<div className='flex flex-row'>
 						<div className='w-1/2'>
@@ -85,7 +89,7 @@ const Footer = () => {
 						2024 Asia-Ya. All Rights Reserved
 					</span>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 };
