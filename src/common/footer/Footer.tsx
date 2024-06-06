@@ -2,13 +2,13 @@ import fog from '../../assets/dobleFog.png';
 import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import FormContact from './FormContact';
-import DirectionMap from './DirectionMap';
+import AddressMap from './AddressMap';
 
 const Footer = () => {
 	return (
 		<>
 			<section className='relative'>
-				<DirectionMap />
+				<AddressMap />
 			</section>
 			<section className='bg-blackDefault px-20 py-20'>
 				<div className=' container mx-auto'>

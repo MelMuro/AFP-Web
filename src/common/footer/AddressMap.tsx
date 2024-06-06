@@ -1,6 +1,6 @@
 import Map from '../../assets/borrarMapa.png';
 
-const DirectionMap = () => {
+const AddressMap = () => {
 	return (
 		<div>
 			<img className='bg-cover w-full h-1/6' src={Map} alt='' />
@@ -8,4 +8,4 @@ const DirectionMap = () => {
 	);
 };
 
-export default DirectionMap;
+export default AddressMap;
