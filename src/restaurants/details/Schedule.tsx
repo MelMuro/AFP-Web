@@ -1,4 +1,4 @@
-const Shcedule = () => {
+const Schedule = () => {
 	return (
 		<>
 			<div>
@@ -31,4 +31,4 @@ const Shcedule = () => {
 	);
 };
 
-export default Shcedule;
+export default Schedule;

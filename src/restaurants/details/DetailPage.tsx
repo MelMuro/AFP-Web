@@ -4,7 +4,7 @@ import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import Fondo from '../../assets/Imagen de Fondo.png';
 import MenuItem from './MenuItem';
-import Shcedule from './Schedule';
+import Schedule from './Schedule';
 
 const DetailPage = () => {
 	return (
@@ -60,7 +60,7 @@ const DetailPage = () => {
 						</div>
 					</div>
 					<div className='w-1/2 pl-24'>
-						<Shcedule />
+						<Schedule />
 					</div>
 				</div>
 			</section>
