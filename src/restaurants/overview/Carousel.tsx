@@ -34,42 +34,81 @@ const Carousel: React.FC = () => {
 	};
 
 	return (
-		<div className='flex justify-center items-start space-x-4 ml-0 mr-[35rem] mt-28'>
-			<div className='w-1/2 px-10 pb-5 pt-16 -mr-28 -mt-10 border-2 border-redDefault'>
-				<h2 className='text-xl font-bold'>City Wok</h2>
-				<h3 className='text-md'>Comida China</h3>
-				<p className='mt-2 pr-48 py-5'>
-					Ingredientes frescos y recetas tradicionales, ofrecemos
-					variedad de platillos de todo tipo. Te invitamos a pruebas
-					nuestras especialidades.
-				</p>
-				<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
-					Ver menú
-				</button>
-			</div>
-			<div className='relative w-1/3'>
-				<img
-					src={slides[currentSlide].image}
-					alt={slides[currentSlide].title}
-					className='w-full h-full object-cover'
-				/>
-				<button
-					onClick={prevSlide}
-					className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
-				>
-					&lt;
-				</button>
-				<button
-					onClick={nextSlide}
-					className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
-				>
-					&gt;
-				</button>
-				<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center'>
-					{slides[currentSlide].title}
+		<>
+			<div className='flex justify-center items-start ml-0 mr-[35rem] mt-28'>
+				<div className='w-1/2 px-10 pb-5 pt-16 -mr-28 -mt-10 border-2 border-redDefault'>
+					<h2 className='text-xl font-bold'>City Wok</h2>
+					<h3 className='text-md'>Comida China</h3>
+					<p className='mt-2 pr-48 py-5'>
+						Ingredientes frescos y recetas tradicionales, ofrecemos
+						variedad de platillos de todo tipo. Te invitamos a
+						pruebas nuestras especialidades.
+					</p>
+					<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
+						Ver menú
+					</button>
+				</div>
+				<div className='relative w-1/3'>
+					<img
+						src={slides[currentSlide].image}
+						alt={slides[currentSlide].title}
+						className='w-full h-full object-cover'
+					/>
+					<button
+						onClick={prevSlide}
+						className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+					>
+						&lt;
+					</button>
+					<button
+						onClick={nextSlide}
+						className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+					>
+						&gt;
+					</button>
+					<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center'>
+						{slides[currentSlide].title}
+					</div>
 				</div>
 			</div>
-		</div>
+
+			<div className='flex justify-center items-start ml-0 mr-[30rem] mt-28'>
+				<div className='relative w-1/3 ml-80'>
+					<img
+						src={slides[currentSlide].image}
+						alt={slides[currentSlide].title}
+						className='w-full h-full object-cover'
+					/>
+					<button
+						onClick={prevSlide}
+						className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+					>
+						&lt;
+					</button>
+					<button
+						onClick={nextSlide}
+						className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+					>
+						&gt;
+					</button>
+					<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center'>
+						{slides[currentSlide].title}
+					</div>
+				</div>
+				<div className='w-1/2 px-10 pb-5 pt-16 -ml-28 -mt-10 border-2 border-redDefault text-right'>
+					<h2 className='text-xl font-bold'>City Wok</h2>
+					<h3 className='text-md'>Comida China</h3>
+					<p className='mt-2 pl-48 py-5'>
+						Ingredientes frescos y recetas tradicionales, ofrecemos
+						variedad de platillos de todo tipo. Te invitamos a
+						pruebas nuestras especialidades.
+					</p>
+					<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
+						Ver menú
+					</button>
+				</div>
+			</div>
+		</>
 	);
 };
 
