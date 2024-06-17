@@ -11,16 +11,15 @@ interface Slide {
 
 const slides: Slide[] = [
 	{
-		image: Comida1, // Reemplaza con tus imágenes
+		image: Comida1,
 		title: 'Arroz frito especial',
 		description: 'Ingredientes frescos y recetas tradicionales...'
 	},
 	{
-		image: Comida2, // Reemplaza con tus imágenes
+		image: Comida2,
 		title: 'Otro plato',
 		description: 'Descripción del otro plato...'
 	}
-	// Agrega más slides según sea necesario
 ];
 
 const Carousel: React.FC = () => {
@@ -35,16 +34,16 @@ const Carousel: React.FC = () => {
 	};
 
 	return (
-		<div className='flex justify-center items-center space-x-4 ml-20 mr-60 mt-28'>
-			<div className='w-1/2 px-10 pb-5 pt-10 -mr-32 -mt-2 border-2 border-redDefault'>
+		<div className='flex justify-center items-start space-x-4 ml-0 mr-[35rem] mt-28'>
+			<div className='w-1/2 px-10 pb-5 pt-16 -mr-28 -mt-10 border-2 border-redDefault'>
 				<h2 className='text-xl font-bold'>City Wok</h2>
 				<h3 className='text-md'>Comida China</h3>
-				<p className='mt-2 pr-52'>
+				<p className='mt-2 pr-48 py-5'>
 					Ingredientes frescos y recetas tradicionales, ofrecemos
 					variedad de platillos de todo tipo. Te invitamos a pruebas
 					nuestras especialidades.
 				</p>
-				<button className='mt-4 px-4 py-2 bg-golden text-blackDefault rounded font-jura'>
+				<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
 					Ver menú
 				</button>
 			</div>
