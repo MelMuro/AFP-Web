@@ -35,8 +35,8 @@ const Carousel: React.FC = () => {
 
 	return (
 		<>
-			<div className='flex justify-center items-start ml-0 mr-[35rem] mt-28'>
-				<div className='w-1/2 px-10 pb-5 pt-16 -mr-28 -mt-10 border-2 border-redDefault'>
+			<div className='flex justify-center items-start ml-0 mr-[20rem] mt-28'>
+				<div className='w-1/2 px-10 py-16 -mr-28 -mt-10 border-2 border-redDefault'>
 					<h2 className='text-xl font-bold'>City Wok</h2>
 					<h3 className='text-md'>Comida China</h3>
 					<p className='mt-2 pr-48 py-5'>
@@ -72,8 +72,8 @@ const Carousel: React.FC = () => {
 				</div>
 			</div>
 
-			<div className='flex justify-center items-start ml-0 mr-[30rem] mt-28'>
-				<div className='relative w-1/3 ml-80'>
+			<div className='flex justify-end items-start ml-0 mr-[20rem] mt-28'>
+				<div className='relative w-1/3'>
 					<img
 						src={slides[currentSlide].image}
 						alt={slides[currentSlide].title}
@@ -95,7 +95,7 @@ const Carousel: React.FC = () => {
 						{slides[currentSlide].title}
 					</div>
 				</div>
-				<div className='w-1/2 px-10 pb-5 pt-16 -ml-28 -mt-10 border-2 border-redDefault text-right'>
+				<div className='w-1/2 px-10 py-16 -ml-28 -mt-10 border-2 border-redDefault text-right'>
 					<h2 className='text-xl font-bold'>City Wok</h2>
 					<h3 className='text-md'>Comida China</h3>
 					<p className='mt-2 pl-48 py-5'>
