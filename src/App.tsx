@@ -3,7 +3,7 @@ import DetailPage from './restaurants/details/DetailPage';
 import './global-styles.css';
 import Footer from './common/footer/Footer';
 
-function App() {
+const App = () => {
 	return (
 		<QueryClientProvider client={new QueryClient()}>
 			<div className='card'>
@@ -12,6 +12,6 @@ function App() {
 			</div>
 		</QueryClientProvider>
 	);
-}
+};
 
 export default App;
