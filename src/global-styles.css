@@ -37,6 +37,14 @@
     @apply font-jura font-bold text-lg;
   }
 
+  .goldenButton{
+    @apply bg-golden p-3 text-blackDefault border-golden border-2 duration-300;
+  }
+
+  .goldenButton:hover{
+    @apply bg-blackDefault p-3 text-golden  border-golden border-2 duration-300;
+  }
+
 }
   
 body {
