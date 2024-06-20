@@ -1,6 +1,7 @@
 import dobleFog from '../../assets/dobleFog.png';
 import Nube1 from '../../assets/Nube1.png';
-import Carousel from './Carousel';
+import CarouselRight from './CarouselRight';
+import CarouselLeft from './CarouselLeft';
 const Restaurants = () => {
 	return (
 		<>
@@ -29,8 +30,9 @@ const Restaurants = () => {
 					</div>
 				</div>
 			</section>
-			<section>
-				<Carousel />
+			<section className='flex'>
+				<CarouselLeft />
+				<CarouselRight />
 			</section>
 		</>
 	);
