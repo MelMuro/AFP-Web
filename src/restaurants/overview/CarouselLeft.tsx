@@ -33,7 +33,7 @@ const CarouselLeft: React.FC = () => {
 	};
 
 	return (
-		<div className='w-1/2 ml-24 '>
+		<div className='w-1/2 ml-24'>
 			<div className='pl-10 pr-5 py-10 border-2 h-[40rem] w-4/6 border-redDefault'>
 				<h2 className='text-xl font-bold'>City Wok</h2>
 				<h3 className='text-md'>Comida China</h3>
@@ -47,7 +47,7 @@ const CarouselLeft: React.FC = () => {
 				</button>
 			</div>
 
-			<div className='relative w-full h-1/3 border-8 ml-8 -mt-[18rem] border-redDefault'>
+			<div className='relative w-11/12 h-1/4 border-8 ml-8 -mt-[18rem] border-redDefault'>
 				<img
 					src={slides[currentSlide].image}
 					alt={slides[currentSlide].title}

@@ -35,20 +35,8 @@ const CarouselRight: React.FC = () => {
 
 	return (
 		<>
-			<div className='flex justify-center items-start ml-0 mr-[20rem] mt-28'>
-				<div className='w-1/2 px-10 py-16 -mr-28 -mt-10 border-2 border-redDefault'>
-					<h2 className='text-xl font-bold'>City Wok</h2>
-					<h3 className='text-md'>Comida China</h3>
-					<p className='mt-2 pr-48 py-5'>
-						Ingredientes frescos y recetas tradicionales, ofrecemos
-						variedad de platillos de todo tipo. Te invitamos a
-						pruebas nuestras especialidades.
-					</p>
-					<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
-						Ver menú
-					</button>
-				</div>
-				<div className='relative w-1/3'>
+			<div className='w-1/2 mr-24'>
+				<div className='relative w-11/12 h-1/4 border-8 ml-8 border-redDefault'>
 					<img
 						src={slides[currentSlide].image}
 						alt={slides[currentSlide].title}
@@ -69,6 +57,19 @@ const CarouselRight: React.FC = () => {
 					<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center'>
 						{slides[currentSlide].title}
 					</div>
+				</div>
+
+				<div className='pr-10 pl-5 py-10 border-2 h-[40rem] -mt-[16rem] w-4/6 border-redDefault float-right content-end'>
+					<h2 className='text-xl font-bold'>City Wok</h2>
+					<h3 className='text-md'>Comida China</h3>
+					<p className='mt-2 py-5'>
+						Ingredientes frescos y recetas tradicionales, ofrecemos
+						variedad de platillos de todo tipo. Te invitamos a
+						pruebas nuestras especialidades.
+					</p>
+					<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
+						Ver menú
+					</button>
 				</div>
 			</div>
 		</>
