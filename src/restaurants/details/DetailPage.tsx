@@ -4,6 +4,7 @@ import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import Fondo from '../../assets/Imagen de Fondo.png';
 import MenuItem from './MenuItem';
+import Schedule from './Schedule';
 
 const DetailPage = () => {
 	return (
@@ -15,7 +16,7 @@ const DetailPage = () => {
 					alt='Fondo'
 				/>
 				<div className='container my-2 py-5 mx-auto flex flex-row items-center text-white z-10 px-32 '>
-					<div className='basis-1/2 py-2 border-r-2 border-golden'>
+					<div className='w-1/2 py-2 border-r-2 border-golden'>
 						<h1>City Wok</h1>
 						<span className='text-golden scheduleCat'>
 							Comida China
@@ -58,10 +59,8 @@ const DetailPage = () => {
 							/>
 						</div>
 					</div>
-					<div className='basis-1/2 ml-5'>
-						<h2 className='text-golden font-montserrat'>
-							Horarios
-						</h2>
+					<div className='w-1/2 pl-24'>
+						<Schedule />
 					</div>
 				</div>
 			</section>
