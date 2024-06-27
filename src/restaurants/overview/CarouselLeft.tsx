@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Comida1 from '../../assets/Comida1.png';
 import Comida2 from '../../assets/Comida2.png';
+import next from '../../assets/next.png';
 
 interface Slide {
 	image: string;
@@ -54,19 +55,24 @@ const CarouselLeft: React.FC = () => {
 							alt={slides[currentSlide].title}
 							className='w-full h-full object-cover'
 						/>
+						<div className='gradient-overlay'></div>
 						<button
 							onClick={prevSlide}
-							className='absolute left-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+							className='absolute -left-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-5 py-1 text-3xl z-20'
 						>
-							&lt;
+							<img src={next} alt='' className='w-full' />
 						</button>
 						<button
 							onClick={nextSlide}
-							className='absolute right-0 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-2 py-1'
+							className='absolute -right-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-5 py-1 text-3xl z-20'
 						>
-							&gt;
+							<img
+								src={next}
+								alt=''
+								className='scale-x-[-1] w-full'
+							/>
 						</button>
-						<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center'>
+						<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center z-20'>
 							{slides[currentSlide].title}
 						</div>
 					</div>
