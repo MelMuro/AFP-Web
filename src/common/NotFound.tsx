@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Torii from '../assets/Torii.jpg';
 
 export default function NotFound() {
@@ -14,12 +15,12 @@ export default function NotFound() {
 					¡Oops! Parece que has cruzado la puerta Torii equivocada.
 				</p>
 				<div className='space-x-4'>
-					<a
-						href='#'
+					<Link
+						to='/'
 						className='text-redDefault border border-redDefault px-4 py-2 font-bold'
 					>
 						Volver a inicio
-					</a>
+					</Link>
 					<a
 						href='#'
 						className='text-blackDefault border border-golden bg-golden px-4 py-2 font-bold'
