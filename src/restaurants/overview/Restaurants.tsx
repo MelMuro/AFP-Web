@@ -1,7 +1,6 @@
 import dobleFog from '../../assets/dobleFog.png';
 import Nube1 from '../../assets/Nube1.png';
-import CarouselRight from './CarouselRight';
-import CarouselLeft from './CarouselLeft';
+import Carousel from './Carousel';
 const Restaurants = () => {
 	return (
 		<>
@@ -31,8 +30,7 @@ const Restaurants = () => {
 				</div>
 			</section>
 			<section className='grid grid-cols-2 mx-24 my-20'>
-				<CarouselLeft />
-				<CarouselRight />
+				<Carousel></Carousel>
 			</section>
 		</>
 	);
