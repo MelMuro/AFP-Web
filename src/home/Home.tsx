@@ -2,6 +2,7 @@ import WhiteLogo from '../assets/WhiteLogo.png';
 import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
+import About from './components/About';
 
 const Home = () => {
 	return (
@@ -77,6 +78,10 @@ const Home = () => {
 						</div>
 					</div>
 				</section>
+			</section>
+
+			<section className='bg-blackDefault py-20 relative'>
+				<About />
 			</section>
 		</>
 	);

@@ -1,19 +1,19 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './global-styles.css';
 import Footer from './common/footer/Footer';
-import NavMenu from './common/NavMenu';
-import Restaurants from './restaurants/overview/Restaurants';
+import Home from './home/Home';
+import { Outlet } from 'react-router-dom';
 
-function App() {
+const App = () => {
 	return (
 		<QueryClientProvider client={new QueryClient()}>
+			<Home />
 			<div className='card'>
-				<NavMenu />
-				<Restaurants />
+				<Outlet />
 				<Footer />
 			</div>
 		</QueryClientProvider>
 	);
-}
+};
 
 export default App;
