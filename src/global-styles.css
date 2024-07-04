@@ -3,50 +3,61 @@
 @tailwind utilities;
 
 @layer base {
-  .font-montserrat {
-    @apply font-sans;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .font-jura {
-    @apply font-sans;
-    font-family: 'Jura', sans-serif;
-  }
+	.font-montserrat {
+		@apply font-sans;
+		font-family: 'Montserrat', sans-serif;
+	}
 
-  h1 {
-    @apply font-jura text-5xl font-bold mb-4;
-  }
+	.font-jura {
+		@apply font-sans;
+		font-family: 'Jura', sans-serif;
+	}
 
-  h2 {
-    @apply font-jura text-4xl font-bold; 
-  }
+	h1 {
+		@apply font-jura text-5xl font-bold mb-4;
+	}
 
-  .infoP{
-    @apply font-montserrat text-base font-normal leading-loose;
-  }
+	h2 {
+		@apply font-jura text-4xl font-bold;
+	}
 
-  .scheduleCat{
-    @apply font-montserrat text-2xl font-medium;
-  }
+	.infoP {
+		@apply font-montserrat text-base font-normal leading-loose;
+	}
 
-  .labelForm{
-    @apply font-jura font-bold text-2xl;
-  }
+	.scheduleCat {
+		@apply font-montserrat text-2xl font-medium;
+	}
 
-  .placeholderForm{
-    @apply font-jura font-bold text-lg;
-  }
+	.labelForm {
+		@apply font-jura font-bold text-2xl;
+	}
 
-  .goldenButton{
-    @apply bg-golden p-3 text-blackDefault border-golden border-2 duration-300;
-  }
+	.placeholderForm {
+		@apply font-jura font-bold text-lg;
+	}
 
-  .goldenButton:hover{
-    @apply bg-blackDefault p-3 text-golden  border-golden border-2 duration-300;
-  }
+	.goldenButton {
+		@apply bg-golden p-3 text-blackDefault border-golden border-2 duration-300;
+	}
 
+	.goldenButton:hover {
+		@apply bg-blackDefault p-3 text-golden  border-golden border-2 duration-300;
+	}
 }
-  
+
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+.gradient-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.2) 0%,
+		rgba(0, 0, 0, 0.8) 98%
+	);
+	z-index: 1;
 }
