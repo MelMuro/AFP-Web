@@ -21,7 +21,6 @@ const Carousel: React.FC = () => {
 		<>
 			{slides.map((_, index) => {
 				const direction = index % 2 === 0;
-				console.log('getDirection', direction);
 				return (
 					<>
 						{!direction ? (
