@@ -1,5 +1,5 @@
 import React from 'react';
-import WhiteLogo from '../../../assets/WhiteLogo.png';
+import WhiteLogo from '../../assets/WhiteLogo.png';
 
 export default function Hero() {
 	return (

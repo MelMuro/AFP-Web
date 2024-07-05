@@ -1,5 +1,5 @@
 import React from 'react';
-import ParkMap from '../../../common/ParkMap';
+import ParkMap from '../../common/ParkMap';
 
 export default function MapOptions() {
 	return (

@@ -1,5 +1,6 @@
 import React from 'react';
-import gyoza from '../../../assets/gyoza 1.png';
+
+import gyoza from '../../assets/gyoza 1.png';
 
 export default function Schedule() {
 	return (

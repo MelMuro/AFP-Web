@@ -1,8 +1,8 @@
 import './Home.css';
 import About from './components/About';
-import Hero from './components/Home/Hero';
-import MapOptions from './components/Home/MapOptions';
-import Schedule from './components/Home/Schedule';
+import Hero from './components/Hero';
+import MapOptions from './components/MapOptions';
+import Schedule from './components/Schedule';
 
 const Home = () => {
 	return (
