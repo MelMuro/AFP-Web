@@ -3,8 +3,11 @@ import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
 import About from './components/About';
+import useHashScroll from '../common/useHashScroll';
 
 const Home = () => {
+	useHashScroll(); // Usa el hook personalizado
+
 	return (
 		<>
 			<section
@@ -41,7 +44,10 @@ const Home = () => {
 						Un lugar para ti, para todos
 					</h2>
 
-					<section className='flex center justify-evenly items-center my-10'>
+					<section
+						id='parkMap'
+						className='flex center justify-evenly items-center my-10'
+					>
 						<ParkMap />
 
 						<ul
@@ -80,7 +86,7 @@ const Home = () => {
 				</section>
 			</section>
 
-			<section className='bg-blackDefault py-20 relative'>
+			<section id='about' className='bg-blackDefault py-20 relative'>
 				<About />
 			</section>
 		</>

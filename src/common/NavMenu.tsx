@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import WhiteLogo from '../assets/WhiteLogo.png';
 import BlackLogo from '../assets/logoAsiaYaBlack.png';
+import useHashScroll from './useHashScroll';
 
 const NavMenu = () => {
 	const location = useLocation();
@@ -13,8 +14,11 @@ const NavMenu = () => {
 		setIsNotFoundPage(!validPaths.includes(location.pathname));
 	}, [location]);
 
+	useHashScroll();
+
 	return (
 		<header
+			id='heading'
 			className={
 				(isNotFoundPage ? 'text-default' : 'text-white') +
 				' absolute md:w-screen md:flex md:justify-between sm:text-center px-2 py-2 sm:px-2 sm:py-2 sm:block md:px-14 md:py-10 z-20'

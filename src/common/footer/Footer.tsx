@@ -3,6 +3,7 @@ import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
 import FormContact from './FormContact';
 import AddressMap from './AddressMap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -13,7 +14,7 @@ const Footer = () => {
 			<section className='bg-blackDefault px-20 py-20'>
 				<div className=' container mx-auto'>
 					<div className='flex flex-row'>
-						<div className='w-1/2'>
+						<div id='contact' className='w-1/2'>
 							<FormContact />
 						</div>
 						<div className='w-1/2'>
@@ -68,10 +69,19 @@ const Footer = () => {
 								<li className='font-semibold'>
 									Asia-Ya Food Park
 								</li>
-								<li>Acerca de nosotros</li>
-								<li>Actividades y negocios</li>
-								<li>Park Map</li>
-								<li>Park Map</li>
+								<li>
+									<Link to={'/#about'}>
+										Acerca de nosotros
+									</Link>
+								</li>
+								<li>
+									<Link to={'/#parkMap'}>Park Map</Link>
+								</li>
+								<li>
+									<Link to={'/restaurants/#heading'}>
+										Restaurantes
+									</Link>
+								</li>
 							</ul>
 						</div>
 
