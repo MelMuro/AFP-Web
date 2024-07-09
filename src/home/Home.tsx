@@ -3,11 +3,8 @@ import gyoza from '../assets/gyoza 1.png';
 import './Home.css';
 import ParkMap from '../common/ParkMap';
 import About from './components/About';
-import useHashScroll from '../common/useHashScroll';
 
 const Home = () => {
-	useHashScroll(); // Usa el hook personalizado
-
 	return (
 		<>
 			<section
