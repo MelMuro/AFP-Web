@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Home from './home/Home.tsx';
 import NotFound from './common/NotFound';
+import Restaurants from './restaurants/overview/Restaurants.tsx';
 
 const routes: RouteObject[] = [
 	{
@@ -21,6 +22,10 @@ const routes: RouteObject[] = [
 			{
 				path: '*',
 				element: <NotFound />
+			},
+			{
+				path: 'restaurants',
+				element: <Restaurants />
 			}
 		]
 	}
