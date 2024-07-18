@@ -7,11 +7,15 @@ import aboutGrande2 from '../../assets/aboutGrande2.png';
 import aboutMediano2 from '../../assets/aboutMediano2.png';
 import aboutSmall2 from '../../assets/aboutSmall2.png';
 import aboutXsmall2 from '../../assets/aboutXsmall2.png';
+import { Link } from 'react-router-dom';
 
 export default function About() {
 	return (
 		<>
-			<section className='flex center justify-evenly items-center h-screen pr-28 pl-28'>
+			<section
+				id='about'
+				className='flex center justify-evenly items-center h-screen pr-28 pl-28'
+			>
 				<section className='w-2/5'>
 					<h2 className='text-white'>Sabor oriental</h2>
 					<p className='infoP text-white mt-4'>
@@ -25,7 +29,9 @@ export default function About() {
 					</p>
 
 					<button className='goldenButton labelForm mt-4'>
-						Conoce nuestros restaurantes
+						<Link to={'/restaurants/#heading'}>
+							Conoce nuestros restaurantes
+						</Link>
 					</button>
 				</section>
 

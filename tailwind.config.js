@@ -16,9 +16,6 @@ export default {
       gray: "#6D6D6D"
 		  },
     extend: {
-      backgroundImage: {
-        'ink': "url('./src/assets/Tinta 5.png')",
-      },
       fontFamily: {
         'montserrat': ['"Montserrat"'],
         'jura': ['"Jura"', 'sans-serif'],

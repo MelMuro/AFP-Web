@@ -2,7 +2,7 @@ import './menuItem.css';
 
 export default function MenuItem() {
 	return (
-		<article className='flip-container w-fit'>
+		<article className='flip-container'>
 			<section className='card w-72 h-96'>
 				<div className='front'>
 					<img

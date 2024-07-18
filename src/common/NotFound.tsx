@@ -21,12 +21,12 @@ export default function NotFound() {
 					>
 						Volver a inicio
 					</Link>
-					<a
-						href='#'
+					<Link
+						to='restaurants'
 						className='text-blackDefault border border-golden bg-golden px-4 py-2 font-bold'
 					>
 						Restaurantes
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>
