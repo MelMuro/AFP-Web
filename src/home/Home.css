@@ -11,7 +11,7 @@ section#bannerInfo {
   z-index:9;
 }
 
-#detailsSection{
+.detailsSection{
   background-image: url('/src/assets/Scales.png');
   background-position: center;
   background-size: cover;

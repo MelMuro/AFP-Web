@@ -9,7 +9,7 @@ const Home = () => {
 		<>
 			<Hero />
 
-			<section id='detailsSection'>
+			<section id='parkMap' className='detailsSection'>
 				<MapOptions />
 				<Schedule />
 			</section>

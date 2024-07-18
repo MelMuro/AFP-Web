@@ -61,3 +61,12 @@ body {
 	);
 	z-index: 1;
 }
+
+.restaurantPageHero{
+	background-image: url('/src/assets/Tinta\ 5.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 43rem;
+    background-position: 0% 134%;
+    background-size: 100% 150%;
+}

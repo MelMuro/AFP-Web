@@ -9,6 +9,7 @@ import {
 import Home from './home/Home.tsx';
 import NotFound from './common/NotFound';
 import Restaurants from './restaurants/overview/Restaurants.tsx';
+import DetailPage from './restaurants/details/DetailPage.tsx';
 
 const routes: RouteObject[] = [
 	{
@@ -26,6 +27,10 @@ const routes: RouteObject[] = [
 			{
 				path: 'restaurants',
 				element: <Restaurants />
+			},
+			{
+				path: '/details/id',
+				element: <DetailPage />
 			}
 		]
 	}
