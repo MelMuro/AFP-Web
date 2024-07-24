@@ -31,7 +31,7 @@ const Restaurants = () => {
 				</div>
 			</section>
 			<section className='grid grid-cols-2 mx-24 my-20'>
-				<Carousel></Carousel>
+				<Carousel />
 			</section>
 		</>
 	);
