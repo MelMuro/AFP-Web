@@ -10,7 +10,7 @@ const FormContact = () => {
 				id='contact'
 				className='placeholderForm p-2 my-2 border-2 border-solid border-golden text-gray w-full'
 			>
-				<option value='' selected className='text-gray'>
+				<option value='' defaultValue={''} className='text-gray'>
 					Asunto
 				</option>
 				<option value='business' className='text-gray'>
