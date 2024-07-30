@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import next from '../../assets/next.png';
+import Restaurant from '../../models/resturant';
 
 interface PropImagesCarousel {
-	slides: Slide[];
+	slides: Restaurant[];
 	direction: boolean;
 }
 
@@ -22,13 +23,22 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 	return (
 		<div
 			className={`absolute ${
-				direction ? 'bottom-10 right-52' : 'top-10 left-5'
+				direction ? 'bottom-10 right-0' : 'top-10 left-0'
 			} `}
 		>
-			<div className='relative w-[150%] h-[18rem] border-8 border-redDefault'>
+			<div className='relative w-[30rem] h-[18rem] border-8 border-redDefault'>
+				{slides[currentSlide].pictures.map((_, index) => (
+					<>
+						<img
+							src={slides[currentSlide].pictures[index]}
+							alt={slides[currentSlide].name}
+							className='w-full h-full object-cover'
+						/>
+					</>
+				))}
 				<img
-					src={slides[currentSlide].image}
-					alt={slides[currentSlide].title}
+					src={slides[currentSlide].pictures[0]}
+					alt={slides[currentSlide].name}
 					className='w-full h-full object-cover'
 				/>
 				<div className='gradient-overlay'></div>
@@ -45,7 +55,7 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 					<img src={next} alt='' className='scale-x-[-1] w-full' />
 				</button>
 				<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center z-20'>
-					{slides[currentSlide].title}
+					{slides[currentSlide].description}
 				</div>
 			</div>
 		</div>

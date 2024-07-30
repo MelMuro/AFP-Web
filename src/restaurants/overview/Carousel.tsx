@@ -39,14 +39,14 @@ const Carousel = () => {
 								<InfoCarousel direction={direction} />
 								<ImagesCarousel
 									direction={direction}
-									slides={slides}
+									slides={[restaurant]}
 								/>
 							</div>
 						) : (
 							<div className='flex justify-center items-center relative h-fit'>
 								<ImagesCarousel
 									direction={direction}
-									slides={slides}
+									slides={[restaurant]}
 								/>
 								<InfoCarousel direction={direction} />
 							</div>
