@@ -1,21 +1,6 @@
-import Comida1 from '../../assets/Comida1.png';
-import Comida2 from '../../assets/Comida2.png';
 import InfoCarousel from './InfoCarousel';
 import ImagesCarousel from './ImagesCarousel';
 import { getRestaurantsQuery } from '../../api/restaurants-api';
-
-const slides: Slide[] = [
-	{
-		image: Comida1,
-		title: 'Arroz frito especial',
-		description: 'Ingredientes frescos y recetas tradicionales...'
-	},
-	{
-		image: Comida2,
-		title: 'Otro plato',
-		description: 'Descripción del otro plato...'
-	}
-];
 
 const Carousel = () => {
 	const { isPending, error, data: restaurants } = getRestaurantsQuery();

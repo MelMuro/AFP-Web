@@ -12,14 +12,34 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 	slides
 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 	const nextSlide = () => {
-		setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+		if (currentImageIndex === slides[currentSlide].pictures.length - 1) {
+			setCurrentImageIndex(0);
+			setCurrentSlide((prev) =>
+				prev === slides.length - 1 ? 0 : prev + 1
+			);
+		} else {
+			setCurrentImageIndex((prev) => prev + 1);
+		}
 	};
 
 	const prevSlide = () => {
-		setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+		if (currentImageIndex === 0) {
+			setCurrentSlide((prev) =>
+				prev === 0 ? slides.length - 1 : prev - 1
+			);
+			setCurrentImageIndex(
+				slides[
+					currentSlide === 0 ? slides.length - 1 : currentSlide - 1
+				].pictures.length - 1
+			);
+		} else {
+			setCurrentImageIndex((prev) => prev - 1);
+		}
 	};
+
 	return (
 		<div
 			className={`absolute ${
@@ -27,20 +47,13 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 			} `}
 		>
 			<div className='relative w-[30rem] h-[18rem] border-8 border-redDefault'>
-				{slides[currentSlide].pictures.map((_, index) => (
-					<>
-						<img
-							src={slides[currentSlide].pictures[index]}
-							alt={slides[currentSlide].name}
-							className='w-full h-full object-cover'
-						/>
-					</>
-				))}
-				<img
-					src={slides[currentSlide].pictures[0]}
-					alt={slides[currentSlide].name}
-					className='w-full h-full object-cover'
-				/>
+				<>
+					<img
+						src={slides[currentSlide].pictures[currentImageIndex]}
+						alt={slides[currentSlide].name}
+						className='w-full h-full object-cover'
+					/>
+				</>
 				<div className='gradient-overlay'></div>
 				<button
 					onClick={prevSlide}
