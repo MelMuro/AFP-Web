@@ -70,3 +70,9 @@ body {
     background-position: 0% 134%;
     background-size: 100% 150%;
 }
+
+@media (max-width: 768px) {
+	.labelForm {
+		@apply font-jura font-bold text-lg;
+	}
+}

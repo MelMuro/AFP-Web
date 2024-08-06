@@ -4,6 +4,7 @@ import Insta from '../../assets/Insta.svg';
 import FormContact from './FormContact';
 import AddressMap from './AddressMap';
 import { Link } from 'react-router-dom';
+import './Footer.css';
 
 const Footer = () => {
 	return (
@@ -11,13 +12,16 @@ const Footer = () => {
 			<section className='relative'>
 				<AddressMap />
 			</section>
-			<section className='bg-blackDefault px-20 py-20'>
+			<section
+				id='footerForm'
+				className='bg-blackDefault lg:px-20 lg:py-20'
+			>
 				<div className=' container mx-auto'>
-					<div className='flex flex-row'>
-						<div id='contact' className='w-1/2'>
+					<div id='footerCont' className='flex flex-row'>
+						<div id='contact' className='lg:w-1/2'>
 							<FormContact />
 						</div>
-						<div className='w-1/2'>
+						<div className='lg:w-1/2'>
 							<h1 className='text-white'>Entremos en contacto</h1>
 							<p className='infoP text-white'>
 								¿Buscas llevar tu emprendimiento hacia un
@@ -30,7 +34,7 @@ const Footer = () => {
 								mejor de los servicios.
 							</p>
 
-							<div className='basis-1/2'>
+							<div id='footerFog' className='basis-1/2'>
 								<img
 									src={fog}
 									alt='Fog'
@@ -40,8 +44,8 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<div className='mt-10 mb-5 flex flex-row'>
-						<div className='basis-1/2'>
+					<div className='mt-10 mb-5 flex flex-row flex-wrap md:gap-3 lg:gap-0'>
+						<div className='lg:basis-1/2 md:basis-full p-4'>
 							<p className='text-white font-semibold text-lg'>
 								Conoce más
 							</p>
@@ -64,7 +68,7 @@ const Footer = () => {
 								Hermosillo XXI, 83280 Hermosillo, Son.
 							</p>
 						</div>
-						<div className='basis-1/4'>
+						<div className='lg:basis-1/4 md:basis-1/2 p-4'>
 							<ul className='text-white'>
 								<li className='font-semibold'>
 									Asia-Ya Food Park
@@ -85,7 +89,7 @@ const Footer = () => {
 							</ul>
 						</div>
 
-						<div className='basis-1/4'>
+						<div className='lg:basis-1/4 md:basis-1/2 p-4'>
 							<ul className='text-white'>
 								<li className='font-semibold'>Legal</li>
 								<li>Terminos y condiciones</li>

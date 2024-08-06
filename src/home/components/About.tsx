@@ -12,11 +12,8 @@ import { Link } from 'react-router-dom';
 export default function About() {
 	return (
 		<>
-			<section
-				id='about'
-				className='flex center justify-evenly items-center h-screen pr-28 pl-28'
-			>
-				<section className='w-2/5'>
+			<section className='lg:flex center lg:ustify-evenly items-center lg:h-fit lg:pr-28 lg:pl-28 lg:pt-96 about1'>
+				<section className='lg:w-2/5 lg:pt-72 lg:pr-20'>
 					<h2 className='text-white'>Sabor oriental</h2>
 					<p className='infoP text-white mt-4'>
 						Nos basamos en un ambiente culinario popular en Asia,
@@ -35,51 +32,57 @@ export default function About() {
 					</button>
 				</section>
 
-				<section className='w-1/2 relative'>
-					<div className='relative'>
+				<section className='lg:w-1/2 relative lg:pt-72'>
+					<div id='firstAbout' className='relative'>
 						<img
-							className='absolute z-0 w-3/4 right-10 -bottom-56'
+							className='lg:absolute z-0 w-3/4 right-10 -bottom-56'
 							src={aboutGrande1}
 						/>
 						<img
+							id='med1'
 							className='absolute z-10 right-0 w-56'
 							src={aboutMediano1}
 						/>
 						<img
+							id='small1'
 							className='absolute z-20 w-44 top-28 right-36'
 							src={aboutSmall1}
 						/>
 						<img
-							className='absolute z-30  w-36 top-36 right-72'
+							id='xsmall1'
+							className='absolute z-30  w-36 top-36 lg:right-72'
 							src={aboutXsmall1}
 						/>
 					</div>
 				</section>
 			</section>
 
-			<section className='flex justify-end items-center h-screen pr-28 pl-28'>
-				<section className='w-1/2 relative'>
-					<div className='relative'>
+			<section className='lg:flex justify-end items-center lg:h-screen lg:pr-28 lg:pl-28 lg:pt-72 pb-20 about2'>
+				<section className='lg:w-1/2 relative'>
+					<div id='secondAbout' className='relative'>
 						<img
-							className='absolute z-0 w-3/4 left-10 -bottom-56'
+							className='lg:absolute z-0 w-3/4 left-10 -bottom-56'
 							src={aboutGrande2}
 						/>
 						<img
-							className='absolute z-10 left-0 w-56'
+							id='med2'
+							className='absolute z-10 lg:left-0 w-56'
 							src={aboutMediano2}
 						/>
 						<img
-							className='absolute z-20 w-44 top-28 left-36'
+							id='small2'
+							className='absolute z-20 w-44 lg:top-28 lg:left-36'
 							src={aboutSmall2}
 						/>
 						<img
-							className='absolute z-30 w-36 top-36 left-72'
+							id='xsmall2'
+							className='absolute z-30 w-36 lg:top-36 lg:left-72'
 							src={aboutXsmall2}
 						/>
 					</div>
 				</section>
 
-				<section className='w-2/5 ml-auto text-right'>
+				<section className='lg:w-2/5 ml-auto lg:text-right'>
 					<h2 className='text-white text-left'>
 						Nuevas experiencias
 					</h2>
@@ -92,7 +95,7 @@ export default function About() {
 						Escucha música en vivo desde nuestra terraza, descubre
 						emprendimientos y más, todo en un solo lugar.
 					</p>
-					<button className='goldenButton labelForm mt-4 mr-16'>
+					<button className='goldenButton labelForm mt-4 lg:mr-16'>
 						Nuestros servicios
 					</button>
 				</section>

@@ -1,6 +1,6 @@
 const FormContact = () => {
 	return (
-		<form className='mr-12 '>
+		<form className='lg:mr-12 '>
 			<label htmlFor='contact' className='my-4 labelForm text-golden'>
 				¿Negocio o dudas?
 			</label>

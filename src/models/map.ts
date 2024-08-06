@@ -9,6 +9,7 @@ declare module '@vis.gl/react-google-maps' {
 		gestureHandling?: string;
 		disableDefaultUI?: boolean;
 		children?: ReactNode;
+		scrollwheel: boolean;
 	};
 
 	type APIProviderProps = {

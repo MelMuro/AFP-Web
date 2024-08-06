@@ -1,0 +1,28 @@
+
+
+@media (max-width: 768px){
+#footerCont{
+    display: flex;
+    flex-direction: column-reverse !important;
+}
+
+#footerForm{
+        padding: 10% 5% 10% 5%;
+       
+    
+}
+
+#contact{
+    z-index: 9;
+    position: relative;
+    margin-top:5%;
+}
+
+#footerFog{
+    position: absolute;
+    z-index:0;
+}
+
+
+}
+
