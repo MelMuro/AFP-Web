@@ -9,12 +9,15 @@ const Home = () => {
 		<>
 			<Hero />
 
-			<section id='parkMap' className='detailsSection'>
+			<section id='parkMap' className='detailsSection lg:pl-10 lg:pb-16 '>
 				<MapOptions />
 				<Schedule />
 			</section>
 
-			<section className='bg-blackDefault py-20 relative'>
+			<section
+				id='about'
+				className='bg-blackDefault lg:py-20 relative gradientAbout'
+			>
 				<About />
 			</section>
 		</>

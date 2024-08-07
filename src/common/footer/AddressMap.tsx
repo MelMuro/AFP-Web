@@ -21,6 +21,7 @@ const AddressMap: FunctionComponent<Record<string, unknown>> = () => {
 					defaultZoom={18}
 					gestureHandling={'greedy'}
 					disableDefaultUI={false}
+					scrollwheel={false}
 				>
 					<AdvancedMarker position={coords}>
 						<img src={pinMarker} width={50} height={50} />

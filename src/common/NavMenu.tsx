@@ -35,11 +35,11 @@ const NavMenu = () => {
 					className='md:w-28 sm:w-2'
 				/>
 			</Link>
-			<nav className='infoP flex md:gap-12 sm:justify-center sm:flex sm:flex-col sm:items-center md:flex-row md:items-center'>
+			<nav className='navegacion infoP flex md:gap-12 sm:justify-center sm:flex sm:flex-col sm:items-center md:flex-row md:items-center'>
 				<Link to={'/restaurants/'} className='sm:mb-4 md:mb-0'>
 					Restaurants
 				</Link>
-				<Link to={'#parkMap'} className='sm:mb-4 md:mb-0'>
+				<Link to={'/#parkMap'} className='sm:mb-4 md:mb-0'>
 					Park map
 				</Link>
 				<Link to={'/#contact'}>Contacto</Link>

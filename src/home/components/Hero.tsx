@@ -10,14 +10,14 @@ export default function Hero() {
 			>
 				<section
 					id='bannerInfo'
-					className='flex items-center justify-center px-28 '
+					className='lg:flex items-center lg:justify-center lg:px-28 md:block'
 				>
 					<img
 						alt='AFP logo'
 						src={WhiteLogo}
-						className='p-8 w-auto'
+						className='p-8 w-auto lg:block  sm:hidden'
 					/>
-					<section className='w-1/2 text-white px-10 ml-12 mr-24'>
+					<section className='lg:w-1/2 text-white lg:px-10 lg:ml-12 lg:mr-24 md:px-6 md:ml-6 md:mr-6 md:w-screen'>
 						<h1>Asian Food Park</h1>
 						<p className='mt-4 infoP '>
 							Sumérgete en un mundo de sabores auténticos y
