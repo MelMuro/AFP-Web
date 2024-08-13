@@ -15,9 +15,9 @@ export default function Hero() {
 					<img
 						alt='AFP logo'
 						src={WhiteLogo}
-						className='p-8 w-auto lg:block  sm:hidden'
+						className='p-8 w-auto lg:w-1/2 lg:block md:block sm:hidden'
 					/>
-					<section className='lg:w-1/2 text-white lg:px-10 lg:ml-12 lg:mr-24 md:px-6 md:ml-6 md:mr-6 md:w-screen'>
+					<section className='lg:w-1/2 text-white xl:px-10 xl:ml-12 xl:mr-24 md:px-6 md:ml-6 md:mr-6 md:w-screen'>
 						<h1>Asian Food Park</h1>
 						<p className='mt-4 infoP '>
 							Sumérgete en un mundo de sabores auténticos y

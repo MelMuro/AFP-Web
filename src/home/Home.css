@@ -1,175 +1,180 @@
 section#bannerInfo {
-  padding-top: 55%;
-  padding-bottom: 20%;
+	padding-top: 55%;
+	padding-bottom: 20%;
 }
 
 #fullBackground {
-  background-image: url('/src/assets/Group\ 83.png');
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  z-index:9;
-}
-
-.detailsSection{
-  background-image: url('/src/assets/Scales.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: fit-screen;
-  margin-top: -16vh;
-  z-index:0;
-}
-
-
-.restaurant:not(:last-child){
-  margin-bottom:1vw;
-}
-
-
-#listRestaurants:after {
-  content: "";
-  position: absolute;
-  width: 15vw;
-  height: 15vw;
-  background-color: transparent;
-  border: 2px solid #932A2A;
-  z-index: 0;
-  right: -4vw;
-  top: -3vw;
-  bottom: 0;
-}
-
-img#gyoza {
-  bottom: 5vh;
-  z-index:9;
-}
-
-.schedule{
-  padding-bottom: 15%;
-}
-
-.gradientAbout {
-  background: #16100C;
-  background: linear-gradient(170deg, rgba(2,0,36,0) 32%, rgba(22, 16, 12,1) 32%);
-  margin-top: -46%;
-}
-
-@media (min-width: 1700px){
-  .about1{
-    padding-top:40%;
-  }
-}
-
-@media (max-width: 768px) {
-  
-  #root > div > section.bg-blackDefault.py-20.relative.gradientAbout > section.flex.justify-end.items-center.h-screen.pr-28.pl-28.pt-72.pb-20{
-    
-      padding-top: 30rem;
-      padding-bottom: 18rem;
-  
-  }
-
-  
-
-#about {
-  padding-top: 20%;
-  padding-bottom: 20%;
-  padding-left: 4%;
-  padding-right:4%;
-  display:block;
-}
-
-#root{
-  overflow-x:hidden;
-}
-#heading img{
-  width:150px !important;
-  }
-
-  #heading{
-    width: 100%;
-    text-align: -webkit-center;
-  }
-
-  #heading{
-    width:100%;
-  }
-
-  #heading > nav{
-    justify-content: space-around !important;
-  }
-
-  #bannerInfo img{
-    display: none;
-  }
-
-  #fullBackground{
-    height: 100vh;
-  }
-
-  section#bannerInfo {
-    padding-top: 115%;
-    padding-left: 3%;
-    padding-right:3%;
+	background-image: url('/src/assets/Group\ 83.png');
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	z-index: 9;
 }
 
 .detailsSection {
-
-  margin-top: -16vh;
-  padding-top: 15vh;
+	background-image: url('/src/assets/Scales.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: fit-screen;
+	margin-top: -16vh;
+	z-index: 0;
 }
 
-.gradientAbout {
-  background: #16100C;
-  margin-top: 0;
+.restaurant:not(:last-child) {
+	margin-bottom: 1vw;
 }
 
-
-.schedul{
-  padding: 4%;
+#listRestaurants:after {
+	content: '';
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	background-color: transparent;
+	border: 2px solid #932a2a;
+	z-index: 0;
+	right: -4vw;
+	top: -3vw;
+	bottom: 0;
 }
 
 img#gyoza {
-  bottom: -60%;
-  z-index: 9;
-  width: 60%;
+	bottom: 5vh;
+	z-index: 9;
 }
 
-.about2{
-  display: flex;
-    flex-direction: column-reverse;
+.schedule {
+	padding-bottom: 15%;
 }
 
-#med2, #med1 {
-  top: 50%;
-  right: 0;
+.gradientAbout {
+	background: #16100c;
+	background: linear-gradient(
+		170deg,
+		rgba(2, 0, 36, 0) 32%,
+		rgba(22, 16, 12, 1) 32%
+	);
+	margin-top: -46%;
 }
 
-#small2, #small1{
-  top: 75%;
-  right: 32%;
+@media (min-width: 1700px) {
+	.about1 {
+		padding-top: 40%;
+	}
 }
 
-#xsmall2, #xsmall1{
-  top:75%;
+@media (max-width: 1024px) and (min-width: 768px) {
+	#bannerInfo {
+		/* display: block; */
+	}
 }
 
-#secondAbout, #firstAbout {
-  text-align: -webkit-center;
-  margin-top: 10%;
-}
+@media (max-width: 640px) {
+	#root
+		> div
+		> section.bg-blackDefault.py-20.relative.gradientAbout
+		> section.flex.justify-end.items-center.h-screen.pr-28.pl-28.pt-72.pb-20 {
+		padding-top: 30rem;
+		padding-bottom: 18rem;
+	}
 
-#firstAbout{
-  margin-bottom: 30%;
-}
+	#about {
+		padding-top: 20%;
+		padding-bottom: 20%;
+		padding-left: 4%;
+		padding-right: 4%;
+		display: block;
+	}
 
-.schedul {
-  padding: 4%;
-  margin: 3%;
-}
-}
+	#root {
+		overflow-x: hidden;
+	}
+	#heading img {
+		width: 150px !important;
+	}
 
+	#heading {
+		width: 100%;
+		text-align: -webkit-center;
+	}
 
-  
+	#heading {
+		width: 100%;
+	}
+
+	#heading > nav {
+		justify-content: space-around !important;
+	}
+
+	#bannerInfo img {
+		display: none;
+	}
+
+	#fullBackground {
+		height: 100vh;
+	}
+
+	section#bannerInfo {
+		padding-top: 115%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
+	.detailsSection {
+		margin-top: -16vh;
+		padding-top: 15vh;
+	}
+
+	.gradientAbout {
+		background: #16100c;
+		margin-top: 0;
+	}
+
+	.schedul {
+		padding: 4%;
+	}
+
+	img#gyoza {
+		bottom: -60%;
+		z-index: 9;
+		width: 60%;
+	}
+
+	.about2 {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#med2,
+	#med1 {
+		top: 50%;
+		right: 0;
+	}
+
+	#small2,
+	#small1 {
+		top: 75%;
+		right: 32%;
+	}
+
+	#xsmall2,
+	#xsmall1 {
+		top: 75%;
+	}
+
+	#secondAbout,
+	#firstAbout {
+		text-align: -webkit-center;
+		margin-top: 10%;
+	}
+
+	#firstAbout {
+		margin-bottom: 30%;
+	}
+
+	.schedul {
+		padding: 4%;
+		margin: 3%;
+	}
+}
