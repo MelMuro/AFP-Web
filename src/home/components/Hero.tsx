@@ -10,7 +10,7 @@ export default function Hero() {
 			>
 				<section
 					id='bannerInfo'
-					className='lg:flex items-center lg:justify-center lg:px-28 md:block'
+					className='lg:flex items-center lg:justify-center xl:px-28 lg:p-0 md:block'
 				>
 					<img
 						alt='AFP logo'

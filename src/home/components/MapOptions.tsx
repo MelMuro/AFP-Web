@@ -4,7 +4,7 @@ import ParkMap from '../../common/ParkMap';
 export default function MapOptions() {
 	return (
 		<>
-			<section className='lg:px-20 lg:py-44'>
+			<section className='xl:px-20 xl:py-44 md:py-32'>
 				<h2 className='block text-center'>
 					Un lugar para ti, para todos
 				</h2>
