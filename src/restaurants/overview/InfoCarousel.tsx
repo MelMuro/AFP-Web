@@ -7,7 +7,8 @@ interface PropInfoCarousel {
 const InfoCarousel: React.FC<PropInfoCarousel> = ({ direction }) => {
 	return (
 		<div
-			className={`p-10 border-2 border-redDefault h-[42rem] w-[44%] ${
+			id='sizeRestCaroussel'
+			className={`p-10 pl-7 text-justify border-2 border-redDefault lg:h-[42rem] xl:w-[55%] ${
 				direction ? '' : 'content-end'
 			} `}
 		>

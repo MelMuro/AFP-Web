@@ -1,27 +1,31 @@
 import dobleFog from '../../assets/dobleFog.png';
 import Nube1 from '../../assets/Nube1.png';
 import Carousel from './Carousel';
+import './Restaurants.css';
 
 const Restaurants = () => {
 	return (
 		<>
 			<section className='relative restaurantPageHero'>
 				<div className='flex items-center'>
-					<div className='w-1/2 px-14 py-44'>
+					<div
+						id='introRestaurants'
+						className='lg:pr-72 lg:px-28 lg:py-44'
+					>
 						<h1 className='text-white'>De Asia a tu mesa</h1>
-						<p className='text-white w-1/2'>
+						<p className='text-white '>
 							Desde sabores picantes hasta dulces, bienvenido a
 							Asia Yá, conoce nuestra variedad de restaurantes
 							donde podrás descubrir nuevos sabores o disfrutar de
 							tus favoritos llevados a otro nivel.
 						</p>
+					</div>
+					<div className='lg:w-1/2'>
 						<img
 							src={Nube1}
 							alt=''
 							className='w-1/4 absolute -left-28'
 						/>
-					</div>
-					<div className='w-1/2'>
 						<img
 							src={dobleFog}
 							alt=''
@@ -30,7 +34,10 @@ const Restaurants = () => {
 					</div>
 				</div>
 			</section>
-			<section className='grid grid-cols-2 mx-24 my-20'>
+			<section
+				id='contCarousel'
+				className='lg:grid lg:grid-cols-2 xl:mx-24 lg:my-20 lg:gap-20 lg:mx-20'
+			>
 				<Carousel />
 			</section>
 		</>
