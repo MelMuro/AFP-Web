@@ -42,16 +42,19 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 
 	return (
 		<div
-			className={`absolute ${
-				direction ? 'bottom-10 right-0' : 'top-10 left-0'
+			id='imageCar'
+			className={`lg:absolute ${
+				direction
+					? 'lg:bottom-4 xl:right-5 md:right-0 min-[1800px]:right-24 min-[1800px]:bottom-12'
+					: 'lg:top-4 xl:left-5 md:left-0 min-[1800px]:left-24 min-[1800px]:top-12'
 			} `}
 		>
-			<div className='relative w-[30rem] h-[18rem] border-8 border-redDefault'>
+			<div className='relative xl:w-[30rem] xl:h-[18rem] border-8 border-redDefault contImgCar '>
 				<>
 					<img
 						src={slides[currentSlide].pictures[currentImageIndex]}
 						alt={slides[currentSlide].name}
-						className='w-full h-full object-cover'
+						className='carouselImages xl:w-full xl:h-full lg:object-cover md:w-[100vh] md:h-[15rem]'
 					/>
 				</>
 				<div className='gradient-overlay'></div>

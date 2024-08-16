@@ -18,9 +18,9 @@ const Carousel = () => {
 			{restaurants.map((restaurant, index) => {
 				const direction = index % 2 === 0;
 				return (
-					<div key={restaurant._id}>
+					<div key={restaurant._id} className='arestaurant'>
 						{!direction ? (
-							<div className='flex justify-center items-center relative h-fit pb-20'>
+							<div className='lg:flex lg:justify-center lg:items-center lg:relative lg:h-fit lg:pb-20 '>
 								<InfoCarousel direction={direction} />
 								<ImagesCarousel
 									direction={direction}
@@ -28,7 +28,7 @@ const Carousel = () => {
 								/>
 							</div>
 						) : (
-							<div className='flex justify-center items-center relative h-fit'>
+							<div className='lg:flex lg:justify-center lg:items-center lg:relative lg:h-fit'>
 								<ImagesCarousel
 									direction={direction}
 									slides={[restaurant]}
