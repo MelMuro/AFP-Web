@@ -16,7 +16,7 @@ const Home = () => {
 
 			<section
 				id='about'
-				className='bg-blackDefault xl:py-20 xl:-mt-[46%] lg:-mt-[75%] relative gradientAbout'
+				className='bg-blackDefault xl:py-20 xl:-mt-[50%] lg:-mt-[75%] relative gradientAbout'
 			>
 				<About />
 			</section>
