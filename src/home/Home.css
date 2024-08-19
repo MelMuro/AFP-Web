@@ -40,12 +40,9 @@ section#bannerInfo {
 }
 
 img#gyoza {
-	bottom: 5vh;
+	bottom: -15vh;
 	z-index: 9;
-}
-
-.schedule {
-	padding-bottom: 15%;
+	right: -5%;
 }
 
 .gradientAbout {
@@ -55,7 +52,6 @@ img#gyoza {
 		rgba(2, 0, 36, 0) 32%,
 		rgba(22, 16, 12, 1) 32%
 	);
-	/* margin-top: -46%; */
 }
 
 @media (min-width: 1700px) {
@@ -83,7 +79,7 @@ img#gyoza {
 		margin-top: 0;
 	}
 
-	.schedul {
+	.schedule {
 		padding: 4%;
 	}
 
@@ -188,12 +184,12 @@ img#gyoza {
 		margin-top: 0;
 	}
 
-	.schedul {
+	.schedule {
 		padding: 4%;
 	}
 
 	img#gyoza {
-		bottom: -60%;
+		bottom: -40%;
 		z-index: 9;
 		width: 60%;
 	}
@@ -230,8 +226,8 @@ img#gyoza {
 		margin-bottom: 30%;
 	}
 
-	.schedul {
+	.schedule {
 		padding: 4%;
-		margin: 3%;
+		margin: 0 3%;
 	}
 }
