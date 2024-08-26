@@ -1,12 +1,13 @@
 import InfoCarousel from './InfoCarousel';
 import ImagesCarousel from './ImagesCarousel';
 import { getRestaurantsQuery } from '../../api/restaurants-api';
+import Loader from '../../common/Loader/Loader';
 
 const Carousel = () => {
 	const { isPending, error, data: restaurants } = getRestaurantsQuery();
 
 	if (isPending) {
-		return 'Loading Resturants data...'; //TODO: Add a spinner
+		return <Loader />;
 	}
 
 	if (error) {
