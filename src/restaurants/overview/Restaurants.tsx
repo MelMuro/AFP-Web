@@ -34,10 +34,7 @@ const Restaurants = () => {
 					</div>
 				</div>
 			</section>
-			<section
-				id='contCarousel'
-				className='lg:grid lg:grid-cols-2 xl:mx-24 lg:my-20 lg:gap-20 lg:mx-20'
-			>
+			<section id='carousel'>
 				<Carousel />
 			</section>
 		</>

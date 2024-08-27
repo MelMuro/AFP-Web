@@ -4,7 +4,8 @@ interface PropInfoCarousel {
 	direction: boolean;
 }
 
-const InfoCarousel: React.FC<PropInfoCarousel> = ({ direction }) => {
+// const InfoCarousel: React.FC<PropInfoCarousel> = ({ direction }) => {
+const InfoCarousel = ({ direction }: PropInfoCarousel) => {
 	return (
 		<div
 			id='sizeRestCaroussel'
