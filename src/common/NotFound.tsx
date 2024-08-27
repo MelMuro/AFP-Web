@@ -17,7 +17,7 @@ export default function NotFound({ error = false }: { error?: boolean }) {
 				</p>
 				<div className='space-x-4'>
 					<Link
-						to='/'
+						to='/#heading'
 						className='text-redDefault border border-redDefault px-4 py-2 font-bold'
 					>
 						Volver a inicio
