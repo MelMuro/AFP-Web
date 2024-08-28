@@ -5,6 +5,7 @@ const localHost = import.meta.env.VITE_LOCALHOST;
 export const getRestaurantsQuery = () =>
 
 	useQuery({
+
 		queryKey: ['restaurantsData'],
 		queryFn: async (): Promise<Restaurant[]> => {
 			const response = await fetch(`${localHost}/restaurants`);
