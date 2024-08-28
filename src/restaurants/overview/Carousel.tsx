@@ -5,14 +5,19 @@ import Loader from '../../common/Loader/Loader';
 import NotFound from '../../common/NotFound';
 
 const Carousel = () => {
-	const { isPending, error, data: restaurants } = getRestaurantsQuery();
+	const {
+		isPending,
+		error,
+		data: restaurants,
+		isError
+	} = getRestaurantsQuery();
 
 	if (isPending) {
 		return <Loader />;
 	}
 
 	if (error) {
-		return <NotFound error={true} />;
+		return <NotFound hasError={isError} />;
 	}
 
 	return (

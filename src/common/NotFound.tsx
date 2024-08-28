@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Torii from '../assets/Torii.jpg';
 
-export default function NotFound({ error = false }: { error?: boolean }) {
+export default function NotFound({ hasError = false }: { hasError?: boolean }) {
 	return (
 		<section className='flex items-center justify-center h-screen font-jura'>
 			<div className='text-center'>
@@ -10,7 +10,7 @@ export default function NotFound({ error = false }: { error?: boolean }) {
 				</div>
 
 				<h1 className='text-6xl font-bold mb-4 mt-6'>
-					{error ? 'Error en el servicio' : '404'}
+					{hasError ? 'Error en el servicio' : '404'}
 				</h1>
 				<p className='text-xl mb-8'>
 					¡Oops! Parece que has cruzado la puerta Torii equivocada.
@@ -22,7 +22,7 @@ export default function NotFound({ error = false }: { error?: boolean }) {
 					>
 						Volver a inicio
 					</Link>
-					{error ? (
+					{hasError ? (
 						<></>
 					) : (
 						<Link
