@@ -11,6 +11,7 @@ const Carousel = () => {
 
 	if (error) {
 		return `An error has occurred while loading resturants data: ${error.message}`; //TODO: Add an error component
+	} else {
 	}
 
 	return (
@@ -33,7 +34,10 @@ const Carousel = () => {
 									direction={direction}
 									slides={[restaurant]}
 								/>
-								<InfoCarousel direction={direction} />
+								<InfoCarousel
+									direction={direction}
+									nameRestaurant={restaurant.name}
+								/>
 							</div>
 						)}
 					</div>

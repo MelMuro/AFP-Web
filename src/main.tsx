@@ -29,7 +29,7 @@ const routes: RouteObject[] = [
 				element: <Restaurants />
 			},
 			{
-				path: '/details/id',
+				path: '/details/:name',
 				element: <DetailPage />
 			}
 		]

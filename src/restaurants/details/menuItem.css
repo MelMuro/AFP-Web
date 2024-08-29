@@ -5,6 +5,14 @@
     /*overflow: hidden;*/
     
   }
+
+
+  .menu-container {
+  
+    min-height: auto; /* Esto asegura que el contenedor al menos tenga la altura de la ventana del navegador */
+    padding-bottom:2rem;
+}
+
   .card {
     position: relative;
     width: 100%;
@@ -17,6 +25,13 @@
     transform: rotateY(180deg);
    
   }
+
+  .front img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+}
+
   .front, .back {
     position: absolute;
     width: 18em;
@@ -43,4 +58,9 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+  }
+
+  .restaurantBanner{
+    -webkit-filter: brightness(30%);
+    filter: brightness(30%);
   }

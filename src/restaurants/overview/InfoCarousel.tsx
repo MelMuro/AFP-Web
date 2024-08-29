@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 
 interface PropInfoCarousel {
 	direction: boolean;
+	nameRestaurant: string;
 }
 
-const InfoCarousel: React.FC<PropInfoCarousel> = ({ direction }) => {
+const InfoCarousel: React.FC<PropInfoCarousel> = ({
+	direction,
+	nameRestaurant
+}) => {
+	console.log('name restaurant ', nameRestaurant);
 	return (
 		<div
 			id='sizeRestCaroussel'
@@ -20,7 +25,7 @@ const InfoCarousel: React.FC<PropInfoCarousel> = ({ direction }) => {
 				especialidades.
 			</p>
 			<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
-				<Link to={'/details/id'}>Ver menú</Link>
+				<Link to={`/details/${nameRestaurant}`}>Ver menú</Link>
 			</button>
 		</div>
 	);
