@@ -29,7 +29,10 @@ const Carousel = () => {
 						<div key={restaurant._id} className='mb-8'>
 							{!direction ? (
 								<div className='lg:flex lg:justify-center lg:items-center lg:relative lg:h-fit lg:pb-20'>
-									<InfoCarousel direction={direction} />
+									<InfoCarousel
+										direction={direction}
+										slides={[restaurant]}
+									/>
 									<ImagesCarousel
 										direction={direction}
 										slides={[restaurant]}
@@ -41,7 +44,10 @@ const Carousel = () => {
 										direction={direction}
 										slides={[restaurant]}
 									/>
-									<InfoCarousel direction={direction} />
+									<InfoCarousel
+										direction={direction}
+										slides={[restaurant]}
+									/>
 								</div>
 							)}
 						</div>

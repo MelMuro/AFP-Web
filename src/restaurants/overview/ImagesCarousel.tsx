@@ -70,9 +70,6 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 				>
 					<img src={next} alt='' className='scale-x-[-1] w-full' />
 				</button>
-				<div className='absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center z-20'>
-					{slides[currentSlide].description}
-				</div>
 			</div>
 		</div>
 	);
