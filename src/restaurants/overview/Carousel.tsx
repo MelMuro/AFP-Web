@@ -8,8 +8,8 @@ const Carousel = () => {
 	const {
 		isPending,
 		error,
-		data: restaurants,
-		isError
+		isError,
+		data: restaurants
 	} = getRestaurantsQuery();
 
 	if (isPending) {
@@ -18,6 +18,7 @@ const Carousel = () => {
 
 	if (error) {
 		return <NotFound hasError={isError} />;
+	} else {
 	}
 
 	return (

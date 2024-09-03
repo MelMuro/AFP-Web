@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Restaurant from '../../models/resturant';
+import { Restaurant } from '../../models/resturant';
 
 interface PropInfoCarousel {
 	slides: Restaurant[];
@@ -22,7 +22,7 @@ const InfoCarousel = ({ direction, slides }: PropInfoCarousel) => {
 					: slides[0].description}
 			</p>
 			<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
-				<Link to={'/details/id'}>Ver menú</Link>
+				<Link to={`/details/${slides[0].name}#heading`}>Ver menú</Link>
 			</button>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import next from '../../assets/next.png';
-import Restaurant from '../../models/resturant';
+import { Restaurant } from '../../models/resturant';
 
 interface PropImagesCarousel {
 	slides: Restaurant[];
