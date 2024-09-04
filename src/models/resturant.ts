@@ -4,7 +4,7 @@ type Day = {
 	end: string;
 };
 
-type Restaurant = {
+export type Restaurant = {
 	name: string;
 	description: string;
 	category: string;
@@ -22,4 +22,19 @@ type Restaurant = {
 	logo: string;
 	_id?: string;
 };
-export default Restaurant;
+
+export type Dish = {
+	category: string;
+	name: string;
+	description: string;
+	price: number;
+	picture: string;
+	isAvailable: boolean;
+	tag?: string;
+};
+
+export type Menu = {
+	dishes: Dish[]; // Aquí cambiamos a un array de objetos de tipo Dish
+	restaurant: string;
+	_id: string;
+};

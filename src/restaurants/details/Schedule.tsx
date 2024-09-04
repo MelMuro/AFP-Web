@@ -1,30 +1,18 @@
-const Schedule = () => {
+const Schedule = ({ scheduleData }) => {
+	console.log('scheduleData ', scheduleData);
 	return (
 		<>
 			<div>
 				<h2 className='text-golden font-montserrat'>Horarios</h2>
 				<ul>
-					<li className='text-white font-montserrat'>
-						Lunes 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Martes 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Miércoles 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Jueves 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Viernes 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Sábado 12:00pm - 10:00pm
-					</li>
-					<li className='text-white font-montserrat'>
-						Domingo Cerrado
-					</li>
+					{scheduleData.map((index) => (
+						<li
+							className='text-white font-montserrat'
+							key={index.name}
+						>
+							{`${index.name}:  ${index.start} - ${index.end}`}
+						</li>
+					))}
 				</ul>
 			</div>
 		</>
