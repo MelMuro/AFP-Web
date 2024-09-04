@@ -1,22 +1,26 @@
+type Day = {
+	name: string;
+	start: string;
+	end: string;
+};
+
 export type Restaurant = {
 	name: string;
 	description: string;
 	category: string;
 	location: number;
-	schedule: {
-		monday: string;
-		tuesday: string;
-		wednesday: string;
-		thursday: string;
-		friday: string;
-		saturday: string;
-		sunday: string;
-	};
+	schedule: Day[];
 	phone: number;
 	email: string;
-	media: string[];
+	media: {
+		facebook?: string;
+		instagram?: string;
+		twitter?: string;
+		webSite?: string;
+	};
 	pictures: string[];
-	_id: string;
+	logo: string;
+	_id?: string;
 };
 
 export type Dish = {
