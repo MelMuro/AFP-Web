@@ -15,20 +15,20 @@ import { MyContext } from '../../common/HeaderContext';
 import { useContext } from 'react';
 
 const DetailPage = () => {
-	const context = useContext(MyContext);
-	const { setValue } = context;
+	const { setValue } = useContext(MyContext);
 	let { name } = useParams<{ name: string }>();
 
 	const {
 		data: restaurantData,
 		isLoading: isRestaurantLoading,
-		isError,
-		error: restaurantError
+		error: restaurantError,
+		isError: restaurantIsError
 	} = getMenuPerRestaurantQuery(name!);
 	const {
 		data: menuData,
 		isLoading: isMenuLoading,
-		error: menuError
+		error: menuError,
+		isError: menuIsError
 	} = getMenuRestaurantQuery(name!);
 
 	if (isRestaurantLoading || isMenuLoading) {
@@ -36,7 +36,10 @@ const DetailPage = () => {
 	}
 
 	if (restaurantError || menuError) {
-		return setValue(isError), (<NotFound hasError={isError} />);
+		return restaurantIsError
+			? (setValue(restaurantIsError),
+			  (<NotFound hasError={restaurantIsError} />))
+			: (setValue(menuIsError), (<NotFound hasError={menuIsError} />));
 	} else {
 	}
 

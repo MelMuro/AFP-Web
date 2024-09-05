@@ -7,12 +7,7 @@ import { Link } from 'react-router-dom';
 import { MyContext } from './HeaderContext';
 
 const NavMenu = () => {
-	const context = useContext(MyContext);
-
-	if (!context) {
-		throw new Error('MyContext must be used within a MyProvider');
-	}
-	const { value, setValue } = context;
+	const { value, setValue } = useContext(MyContext);
 
 	const location = useLocation();
 	const [isNotFoundPage, setIsNotFoundPage] = useState(false);
