@@ -11,11 +11,11 @@ import Schedule from './Schedule';
 import { useParams } from 'react-router-dom';
 import Loader from '../../common/Loader/Loader';
 import NotFound from '../../common/NotFound';
-import { MyContext } from '../../common/HeaderContext';
+import { HeaderContext } from '../../common/HeaderContext';
 import { useContext } from 'react';
 
 const DetailPage = () => {
-	const { setValue } = useContext(MyContext);
+	const { setIsError } = useContext(HeaderContext);
 	let { name } = useParams<{ name: string }>();
 
 	const {
@@ -32,14 +32,14 @@ const DetailPage = () => {
 	} = getMenuRestaurantQuery(name!);
 
 	if (isRestaurantLoading || isMenuLoading) {
-		return setValue(false), (<Loader />);
+		return setIsError(false), (<Loader />);
 	}
 
 	if (restaurantError || menuError) {
 		return restaurantIsError
-			? (setValue(restaurantIsError),
+			? (setIsError(restaurantIsError),
 			  (<NotFound hasError={restaurantIsError} />))
-			: (setValue(menuIsError), (<NotFound hasError={menuIsError} />));
+			: (setIsError(menuIsError), (<NotFound hasError={menuIsError} />));
 	} else {
 	}
 

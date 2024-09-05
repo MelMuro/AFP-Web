@@ -1,23 +1,23 @@
 import { createContext, ReactNode, useState } from 'react';
 
-interface MyContextType {
-	value: boolean;
-	setValue: (value: boolean) => void;
+interface IHeaderContext {
+	isError: boolean;
+	setIsError: (value: boolean) => void;
 }
 
-export const MyContext = createContext<MyContextType>({
-	value: false,
-	setValue: () => {}
+export const HeaderContext = createContext<IHeaderContext>({
+	isError: false,
+	setIsError: () => {}
 });
 
-export const MyProviderHeader: React.FC<{ children: ReactNode }> = ({
+export const HeaderContextProvider: React.FC<{ children: ReactNode }> = ({
 	children
 }) => {
-	const [value, setValue] = useState<boolean>(false);
+	const [isError, setIsError] = useState<boolean>(false);
 
 	return (
-		<MyContext.Provider value={{ value, setValue }}>
+		<HeaderContext.Provider value={{ isError, setIsError }}>
 			{children}
-		</MyContext.Provider>
+		</HeaderContext.Provider>
 	);
 };

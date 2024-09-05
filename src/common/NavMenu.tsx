@@ -4,10 +4,10 @@ import WhiteLogo from '../assets/WhiteLogo.png';
 import BlackLogo from '../assets/logoAsiaYaBlack.png';
 import useHashScroll from './useHashScroll';
 import { Link } from 'react-router-dom';
-import { MyContext } from './HeaderContext';
+import { HeaderContext } from './HeaderContext';
 
 const NavMenu = () => {
-	const { value, setValue } = useContext(MyContext);
+	const { isError, setIsError } = useContext(HeaderContext);
 
 	const location = useLocation();
 	const [isNotFoundPage, setIsNotFoundPage] = useState(false);
@@ -19,7 +19,7 @@ const NavMenu = () => {
 		const isValid =
 			validPaths.includes(path) || path.startsWith('/details/');
 		setIsNotFoundPage(!isValid);
-		setValue(false);
+		setIsError(false);
 	}, [location]);
 
 	useHashScroll();
@@ -28,14 +28,14 @@ const NavMenu = () => {
 		<header
 			id='heading'
 			className={
-				(isNotFoundPage || value ? 'text-default' : 'text-white') +
+				(isNotFoundPage || isError ? 'text-default' : 'text-white') +
 				' absolute md:w-screen md:flex md:justify-between sm:text-center px-2 py-2 sm:px-2 sm:py-2 sm:block md:px-14 md:py-10 z-20'
 			}
 		>
 			<Link to={'/'}>
 				<img
 					alt='AFP logo'
-					src={isNotFoundPage || value ? BlackLogo : WhiteLogo}
+					src={isNotFoundPage || isError ? BlackLogo : WhiteLogo}
 					className='md:w-28 sm:w-2'
 				/>
 			</Link>
