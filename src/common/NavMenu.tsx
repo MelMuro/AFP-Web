@@ -10,7 +10,6 @@ const NavMenu = () => {
 	const { isError, setIsError } = useContext(HeaderContext);
 
 	const location = useLocation();
-	const [isNotFoundPage, setIsNotFoundPage] = useState(false);
 
 	const validPaths = ['/', '/home', '/restaurants/', '/details/'];
 
@@ -18,8 +17,7 @@ const NavMenu = () => {
 		const path = location.pathname;
 		const isValid =
 			validPaths.includes(path) || path.startsWith('/details/');
-		setIsNotFoundPage(!isValid);
-		setIsError(false);
+		setIsError(!isValid);
 	}, [location]);
 
 	useHashScroll();
@@ -28,14 +26,14 @@ const NavMenu = () => {
 		<header
 			id='heading'
 			className={
-				(isNotFoundPage || isError ? 'text-default' : 'text-white') +
+				(isError ? 'text-default' : 'text-white') +
 				' absolute md:w-screen md:flex md:justify-between sm:text-center px-2 py-2 sm:px-2 sm:py-2 sm:block md:px-14 md:py-10 z-20'
 			}
 		>
 			<Link to={'/'}>
 				<img
 					alt='AFP logo'
-					src={isNotFoundPage || isError ? BlackLogo : WhiteLogo}
+					src={isError ? BlackLogo : WhiteLogo}
 					className='md:w-28 sm:w-2'
 				/>
 			</Link>
