@@ -1,70 +1,65 @@
 .flip-container {
-    background-color: transparent;
-    border-radius: 1em;
-    perspective: 1000px; 
-    /*overflow: hidden;*/
-    
-  }
-
-
-  .menu-container {
-  
-    min-height: auto; /* Esto asegura que el contenedor al menos tenga la altura de la ventana del navegador */
-    padding-bottom:2rem;
+	background-color: transparent;
+	border-radius: 1em;
+	perspective: 1000px;
+	/*overflow: hidden;*/
 }
 
-  .card {
-    position: relative;
-    width: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    transition: 0.3s;
-
-  }
-  .flip-container:hover .card {
-    transform: rotateY(180deg);
-   
-  }
-
-  .front img {
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover;
+.menu-container {
+	min-height: auto; /* Esto asegura que el contenedor al menos tenga la altura de la ventana del navegador */
+	padding-bottom: 2rem;
 }
 
-  .front, .back {
-    position: absolute;
-    width: 18em;
-    height: auto;
-    backface-visibility: hidden;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.34);
-    -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.34);
-    -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.34);
-    overflow: hidden;
-    border-radius: 1vw;
+.card {
+	position: relative;
+	width: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	transition: 0.3s;
+}
+.flip-container:hover .card {
+	transform: rotateY(180deg);
 }
 
-  .front section, .back{
-    padding:2rem;
-  }
-  
-  .back {
-    background-color: #16100C;
-    color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
+.front img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
 
-  .restaurantBanner{
-    -webkit-filter: brightness(30%);
-    filter: brightness(30%);
-  }
-=======
+.front,
+.back {
+	position: absolute;
+	width: 18em;
+	height: auto;
+	backface-visibility: hidden;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.34);
+	-webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.34);
+	-moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.34);
+	overflow: hidden;
+	border-radius: 1vw;
+}
+
+.front section,
+.back {
+	padding: 2rem;
+}
+
+.back {
+	background-color: #16100c;
+	color: white;
+	transform: rotateY(180deg);
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.restaurantBanner {
+	-webkit-filter: brightness(30%);
+	filter: brightness(30%);
 	background-color: transparent;
 	border-radius: 1em;
 	perspective: 1000px;

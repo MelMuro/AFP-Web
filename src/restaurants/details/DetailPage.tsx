@@ -1,5 +1,3 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
 import {
 	getMenuPerRestaurantQuery,
 	getMenuRestaurantQuery
@@ -8,35 +6,41 @@ import Phone from '../../assets/Phone.svg';
 import Mail from '../../assets/Mail.svg';
 import Face from '../../assets/Face.svg';
 import Insta from '../../assets/Insta.svg';
-import Fondo from '../../assets/Imagen de Fondo.png';
 import MenuItem from './MenuItem';
 import Schedule from './Schedule';
 import { useParams } from 'react-router-dom';
+import Loader from '../../common/Loader/Loader';
+import NotFound from '../../common/NotFound';
+import { HeaderContext } from '../../common/HeaderContext';
+import { useContext } from 'react';
 
 const DetailPage = () => {
+	const { setIsError } = useContext(HeaderContext);
 	let { name } = useParams<{ name: string }>();
 
 	const {
 		data: restaurantData,
 		isLoading: isRestaurantLoading,
-		error: restaurantError
+		error: restaurantError,
+		isError: restaurantIsError
 	} = getMenuPerRestaurantQuery(name!);
 	const {
 		data: menuData,
 		isLoading: isMenuLoading,
-		error: menuError
+		error: menuError,
+		isError: menuIsError
 	} = getMenuRestaurantQuery(name!);
 
 	if (isRestaurantLoading || isMenuLoading) {
-		return 'Obteniendo información...'; // TODO: Add a spinner
+		return setIsError(false), (<Loader />);
 	}
 
 	if (restaurantError || menuError) {
-		return `¡Ha ocurrido un error al cargar la información! ${
-			restaurantError?.message || menuError?.message
-		}`; // TODO: Add an error component
+		return restaurantIsError
+			? (setIsError(restaurantIsError),
+			  (<NotFound hasError={restaurantIsError} />))
+			: (setIsError(menuIsError), (<NotFound hasError={menuIsError} />));
 	} else {
-		console.log('restaurantData ', restaurantData);
 	}
 
 	return (

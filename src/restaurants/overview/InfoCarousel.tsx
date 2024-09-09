@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom';
+import { Restaurant } from '../../models/resturant';
 
 interface PropInfoCarousel {
+	slides: Restaurant[];
 	direction: boolean;
-	nameRestaurant: string;
 }
 
-const InfoCarousel: React.FC<PropInfoCarousel> = ({
-	direction,
-	nameRestaurant
-}) => {
-	console.log('name restaurant ', nameRestaurant);
+const InfoCarousel = ({ direction, slides }: PropInfoCarousel) => {
 	return (
 		<div
 			id='sizeRestCaroussel'
@@ -17,15 +14,15 @@ const InfoCarousel: React.FC<PropInfoCarousel> = ({
 				direction ? '' : 'content-end'
 			} `}
 		>
-			<h2 className='text-xl font-bold'>City Wok</h2>
-			<h3 className='text-md'>Comida China</h3>
+			<h2 className='text-xl font-bold'>{slides[0].name}</h2>
+			<h3 className='text-md'>{slides[0].category}</h3>
 			<p className='mt-2 py-5'>
-				Ingredientes frescos y recetas tradicionales, ofrecemos variedad
-				de platillos de todo tipo. Te invitamos a pruebas nuestras
-				especialidades.
+				{slides[0].description.split(' ').length > 25
+					? slides[0].description.split(' ', 25).join(' ') + '...'
+					: slides[0].description}
 			</p>
 			<button className='mt-4 px-4 py-2 bg-golden font-bold text-blackDefault font-jura'>
-				<Link to={`/details/${nameRestaurant}`}>Ver menú</Link>
+				<Link to={`/details/${slides[0].name}#heading`}>Ver menú</Link>
 			</button>
 		</div>
 	);
