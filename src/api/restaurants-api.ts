@@ -31,16 +31,15 @@ export const getMenuPerRestaurantQuery = (name: string) =>
 
 export const getMenuRestaurantQuery = (name: string) =>
 	useQuery({
-		queryKey: ['menuData'],
-		queryFn: async (): Promise<Menu[]> => {
-			const response = await fetch(
-				`${localHost}/menus/restaurant/${name}`
-			);
+		queryKey: ['menuData', name],
+		queryFn: async (): Promise<Restaurant> => {
+			const response = await fetch(`${localHost}/restaurants/${name}`);
 			if (!response.ok) {
 				throw new Error(
 					'There was an error while calling the endpoint'
 				);
 			}
-			return response.json();
+			const data = await response.json();
+			return data ?? {}; // Retorna un objeto vacío en caso de que no haya datos
 		}
 	});

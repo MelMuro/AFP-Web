@@ -21,6 +21,8 @@ export type Restaurant = {
 	pictures: string[];
 	logo: string;
 	_id?: string;
+
+	menu: Dish[];
 };
 
 export type Dish = {
@@ -30,11 +32,12 @@ export type Dish = {
 	price: number;
 	picture: string;
 	isAvailable: boolean;
-	tag?: string;
+	tag: string;
+	_id?: string;
 };
 
 export type Menu = {
-	dishes: Dish[]; // Aquí cambiamos a un array de objetos de tipo Dish
+	dishes: Dish[];
 	restaurant: string;
 	_id: string;
 };

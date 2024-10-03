@@ -7,10 +7,8 @@ interface MenuItemProps {
 }
 
 export default function MenuItem({ dish }: MenuItemProps) {
-	console.log('menuItem ', dish);
-
 	const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-		(e.target as HTMLImageElement).src = defaultImage; // Establece la imagen por defecto
+		(e.target as HTMLImageElement).src = defaultImage;
 	};
 
 	return (

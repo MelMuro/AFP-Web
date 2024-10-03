@@ -19,28 +19,20 @@ const DetailPage = () => {
 	let { name } = useParams<{ name: string }>();
 
 	const {
-		data: restaurantData,
-		isLoading: isRestaurantLoading,
-		error: restaurantError,
-		isError: restaurantIsError
-	} = getMenuPerRestaurantQuery(name!);
-	const {
 		data: menuData,
 		isLoading: isMenuLoading,
 		error: menuError,
 		isError: menuIsError
 	} = getMenuRestaurantQuery(name!);
 
-	if (isRestaurantLoading || isMenuLoading) {
-		return setIsError(false), (<Loader />);
+	if (isMenuLoading) {
+		setIsError(false);
+		return <Loader />;
 	}
 
-	if (restaurantError || menuError) {
-		return restaurantIsError
-			? (setIsError(restaurantIsError),
-			  (<NotFound hasError={restaurantIsError} />))
-			: (setIsError(menuIsError), (<NotFound hasError={menuIsError} />));
-	} else {
+	if (menuError || !menuData) {
+		setIsError(menuIsError || !menuData);
+		return <NotFound hasError={menuIsError || !menuData} />;
 	}
 
 	return (
@@ -48,18 +40,16 @@ const DetailPage = () => {
 			<section className='relative'>
 				<img
 					className='absolute h-[100%] w-full object-cover -z-10 restaurantBanner '
-					src={restaurantData?.pictures[0]}
+					src={menuData?.pictures[0]}
 					alt='Fondo'
 				/>
 				<div className='container py-5 mx-auto flex flex-row items-center text-white z-10 px-32 pt-48 pb-36'>
 					<div className='w-1/2 py-2 border-r-2 border-golden'>
-						<h1>{restaurantData?.name}</h1>
+						<h1>{menuData?.name}</h1>
 						<span className='text-golden scheduleCat'>
-							{restaurantData?.category}
+							{menuData?.category}
 						</span>
-						<p className='infoP w-3/5'>
-							{restaurantData?.description}
-						</p>
+						<p className='infoP w-3/5'>{menuData?.description}</p>
 						<ul className='infoP mt-5'>
 							<li className='flex items-center'>
 								<img
@@ -67,8 +57,8 @@ const DetailPage = () => {
 									src={Phone}
 									alt='Phone'
 								/>
-								<a href={`tel:${restaurantData?.phone}`}>
-									{restaurantData?.phone}
+								<a href={`tel:${menuData?.phone}`}>
+									{menuData?.phone}
 								</a>
 							</li>
 							<li className='flex items-center'>
@@ -77,20 +67,20 @@ const DetailPage = () => {
 									src={Mail}
 									alt='Email'
 								/>
-								<a href={`mailto:${restaurantData?.email}`}>
-									{restaurantData?.email}
+								<a href={`mailto:${menuData?.email}`}>
+									{menuData?.email}
 								</a>
 							</li>
 						</ul>
 						<div className='flex mt-10'>
-							<a href={restaurantData?.media?.facebook}>
+							<a href={menuData?.media?.facebook}>
 								<img
 									className='mr-3 w-8'
 									src={Face}
 									alt='Facebook'
 								/>
 							</a>
-							<a href={restaurantData?.media?.instagram}>
+							<a href={menuData?.media?.instagram}>
 								<img
 									className='ml-3 w-8'
 									src={Insta}
@@ -100,7 +90,7 @@ const DetailPage = () => {
 						</div>
 					</div>
 					<div className='w-1/2 pl-24'>
-						<Schedule scheduleData={restaurantData?.schedule} />
+						<Schedule scheduleData={menuData?.schedule} />
 					</div>
 				</div>
 			</section>
@@ -109,12 +99,12 @@ const DetailPage = () => {
 				<h1 className='text-center my-10'>Platillo fuerte</h1>
 				<div className='menu-container'>
 					<div className='grid grid-cols-4 gap-10 mx-32'>
-						{menuData?.dishes?.length ? (
-							menuData.dishes.map((dish) => (
+						{menuData?.menu?.length ? (
+							menuData.menu.map((dish) => (
 								<MenuItem key={dish.name} dish={dish} />
 							))
 						) : (
-							<p>No hay platillos disponibles.</p> // O cualquier mensaje de espera o carga
+							<p>No hay platillos disponibles.</p>
 						)}
 					</div>
 				</div>

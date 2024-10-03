@@ -1,5 +1,4 @@
 const Schedule = ({ scheduleData }) => {
-	console.log('scheduleData ', scheduleData);
 	return (
 		<>
 			<div>
