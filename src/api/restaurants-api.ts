@@ -20,16 +20,15 @@ export const getMenuPerRestaurantQuery = (name: string) =>
 	useQuery({
 		queryKey: ['menuData', name],
 		queryFn: async (): Promise<Restaurant> => {
-			// Cambié de Restaurant[] a Restaurant
 			const response = await fetch(`${localHost}/restaurants/${name}`);
 			if (!response.ok) {
 				throw new Error('¡Algo ocurrió al cargar la información!');
 			}
-			return response.json(); // Esto debe devolver un solo objeto Restaurant
+			return response.json();
 		}
 	});
 
-export const getMenuRestaurantQuery = (name: string) =>
+export const getRestaurantByNameQuery = (name: string) =>
 	useQuery({
 		queryKey: ['menuData', name],
 		queryFn: async (): Promise<Restaurant> => {
@@ -40,6 +39,6 @@ export const getMenuRestaurantQuery = (name: string) =>
 				);
 			}
 			const data = await response.json();
-			return data ?? {}; // Retorna un objeto vacío en caso de que no haya datos
+			return data ?? {};
 		}
 	});
