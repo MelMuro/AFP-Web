@@ -11,14 +11,14 @@ const NavMenu = () => {
 
 	const location = useLocation();
 
-	const validPaths = ['/', '/home', '/restaurants/', '/details/'];
+	const validPaths = ['/', '/home', '/restaurants', '/details'];
 
 	useEffect(() => {
-		const path = location.pathname;
+		const path = location.pathname.replace(/\/+$/, '') || '/';
 		const isValid =
-			validPaths.includes(path) || path.startsWith('/details/');
+			validPaths.includes(path) || path.startsWith('/details');
 		setIsError(!isValid);
-	}, [location]);
+	}, [location, setIsError]);
 
 	useHashScroll();
 
