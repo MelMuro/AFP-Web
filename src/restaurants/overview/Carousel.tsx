@@ -27,7 +27,7 @@ const Carousel = () => {
 				{restaurants.map((restaurant, index) => {
 					const direction = index % 2 === 0;
 					return (
-						<div key={restaurant._id} className='mb-8'>
+						<div key={restaurant._id?.toString()} className='mb-8'>
 							{!direction ? (
 								<div className='lg:flex lg:justify-center lg:items-center lg:relative lg:h-fit lg:pb-20'>
 									<InfoCarousel

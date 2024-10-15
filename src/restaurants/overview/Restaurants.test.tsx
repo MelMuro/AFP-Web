@@ -12,5 +12,8 @@ describe('Restaurants', () => {
 
 		expect(await result.findByAltText('Restaurant 1')).toBeInTheDocument();
 		expect(await result.findByAltText('Restaurant 2')).toBeInTheDocument();
+		expect(
+			await result.getByText('Some test description')
+		).toBeInTheDocument();
 	});
 });

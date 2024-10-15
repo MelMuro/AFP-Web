@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb';
 type Day = {
 	name: string;
 	start: string;
@@ -5,6 +6,7 @@ type Day = {
 };
 
 export type Restaurant = {
+	_id?: ObjectId;
 	name: string;
 	description: string;
 	category: string;
@@ -20,8 +22,6 @@ export type Restaurant = {
 	};
 	pictures: string[];
 	logo: string;
-	_id?: string;
-
 	menu: Dish[];
 };
 
@@ -33,11 +33,5 @@ export type Dish = {
 	picture: string;
 	isAvailable: boolean;
 	tag: string;
-	_id?: string;
-};
-
-export type Menu = {
-	dishes: Dish[];
-	restaurant: string;
-	_id: string;
+	_id?: ObjectId;
 };
