@@ -45,8 +45,8 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 			id='imageCar'
 			className={`lg:absolute ${
 				direction
-					? 'lg:bottom-4 xl:right-5 md:right-0 min-[1800px]:right-24 min-[1800px]:bottom-12'
-					: 'lg:top-4 xl:left-5 md:left-0 min-[1800px]:left-24 min-[1800px]:top-12'
+					? 'lg:bottom-14 xl:bottom-4 lg:-right-5 xl:right-5 md:right-0 min-[1800px]:right-24 min-[1800px]:bottom-12'
+					: 'lg:top-14 xl:top-4 lg:-left-5 xl:left-5  md:left-0 min-[1800px]:left-24 min-[1800px]:top-12'
 			} `}
 		>
 			<div className='relative xl:w-[30rem] xl:h-[18rem] border-8 border-redDefault contImgCar '>
@@ -60,13 +60,13 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 				<div className='gradient-overlay'></div>
 				<button
 					onClick={prevSlide}
-					className='absolute -left-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-5 py-1 text-3xl z-20'
+					className='absolute -left-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white lg:ml-0 ml-5 px-5 py-1 text-3xl z-20'
 				>
 					<img src={next} alt='' className='w-full' />
 				</button>
 				<button
 					onClick={nextSlide}
-					className='absolute -right-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white px-5 py-1 text-3xl z-20'
+					className='absolute -right-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white lg:mr-0 mr-5 px-5 py-1 text-3xl z-20'
 				>
 					<img src={next} alt='' className='scale-x-[-1] w-full' />
 				</button>

@@ -15,6 +15,11 @@
 }
 
 @media (min-width: 767px) and (max-width: 820px) {
+	#introRestaurants {
+		padding: 30% 10%;
+		z-index: 9;
+	}
+
 	#sizeRestCaroussel {
 		width: 80% !important;
 		margin: auto;
