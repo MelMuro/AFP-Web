@@ -15,7 +15,7 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 	const nextSlide = () => {
-		if (currentImageIndex === slides[currentSlide].pictures.length - 1) {
+		if (currentImageIndex === slides[currentSlide].menu.length - 1) {
 			setCurrentImageIndex(0);
 			setCurrentSlide((prev) =>
 				prev === slides.length - 1 ? 0 : prev + 1
@@ -33,7 +33,7 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 			setCurrentImageIndex(
 				slides[
 					currentSlide === 0 ? slides.length - 1 : currentSlide - 1
-				].pictures.length - 1
+				].menu.length - 1
 			);
 		} else {
 			setCurrentImageIndex((prev) => prev - 1);
@@ -52,8 +52,10 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 			<div className='relative xl:w-[30rem] xl:h-[18rem] border-8 border-redDefault contImgCar '>
 				<>
 					<img
-						src={slides[currentSlide].pictures[currentImageIndex]}
-						alt={slides[currentSlide].name}
+						src={
+							slides[currentSlide].menu[currentImageIndex].picture
+						}
+						alt={slides[currentSlide].menu[currentImageIndex].name}
 						className='carouselImages xl:w-full xl:h-full lg:object-cover md:w-[100vh] md:h-[15rem]'
 					/>
 				</>
@@ -62,13 +64,17 @@ const ImagesCarousel: React.FC<PropImagesCarousel> = ({
 					onClick={prevSlide}
 					className='absolute -left-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white lg:ml-0 ml-5 px-5 py-1 text-3xl z-20'
 				>
-					<img src={next} alt='' className='w-full' />
+					<img src={next} alt='prev' className='w-full' />
 				</button>
 				<button
 					onClick={nextSlide}
 					className='absolute -right-8 top-1/2 transform -translate-y-1/2 bg-redDefault text-white lg:mr-0 mr-5 px-5 py-1 text-3xl z-20'
 				>
-					<img src={next} alt='' className='scale-x-[-1] w-full' />
+					<img
+						src={next}
+						alt='next'
+						className='scale-x-[-1] w-full'
+					/>
 				</button>
 			</div>
 		</div>
