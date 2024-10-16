@@ -11,14 +11,16 @@ describe('Restaurants', () => {
 			</MemoryRouter>
 		);
 
-		expect(await result.findByAltText('Restaurant 1')).toBeInTheDocument();
-		expect(await result.findByAltText('Restaurant 2')).toBeInTheDocument();
+		expect(await result.findByText('Restaurant 1')).toBeInTheDocument();
+		expect(await result.getByText('Restaurant 2')).toBeInTheDocument();
+		// expect(await result.findByText('Restaurant 1')).toBeInTheDocument();
+
 		expect(
 			await result.getByText('Some test description')
 		).toBeInTheDocument();
 	});
 
-	it('Click buttons Carousel section', async () => {
+	it('Click next button Carousel section', async () => {
 		const result = renderWithClient(
 			<MemoryRouter>
 				<Restaurants />
@@ -27,7 +29,24 @@ describe('Restaurants', () => {
 
 		expect(await result.findByAltText('chilaquiles')).toBeInTheDocument();
 
-		// const slideButton = result.getByAltText('next');
-		// fireEvent.change(slideButton);
+		const slideButtonsNext = result.getAllByAltText('next');
+		fireEvent.click(slideButtonsNext[0]);
+
+		expect(await result.findByAltText('carlota')).toBeInTheDocument();
+	});
+
+	it('Click prev button Carousel section', async () => {
+		const result = renderWithClient(
+			<MemoryRouter>
+				<Restaurants />
+			</MemoryRouter>
+		);
+
+		expect(await result.findByAltText('Espaguetti')).toBeInTheDocument();
+
+		const slideButtonsPrev = result.getAllByAltText('prev');
+		fireEvent.click(slideButtonsPrev[1]);
+
+		expect(await result.findByAltText('Sake')).toBeInTheDocument();
 	});
 });
