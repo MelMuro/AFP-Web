@@ -13,7 +13,6 @@ describe('Restaurants', () => {
 
 		expect(await result.findByText('Restaurant 1')).toBeInTheDocument();
 		expect(await result.getByText('Restaurant 2')).toBeInTheDocument();
-		// expect(await result.findByText('Restaurant 1')).toBeInTheDocument();
 
 		expect(
 			await result.getByText('Some test description')
