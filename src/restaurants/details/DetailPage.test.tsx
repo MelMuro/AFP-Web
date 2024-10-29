@@ -40,8 +40,8 @@ describe('DetailPage', () => {
 		expect(await result.getByText('De Asia a tu mesa')).toBeInTheDocument();
 		expect(await result.findByText('Restaurant 1')).toBeInTheDocument();
 
-		const fistButton = await result.findAllByText('Ver menú');
-		fireEvent.click(fistButton[0]);
+		const [fistButton] = await result.findAllByText('Ver menú');
+		fireEvent.click(fistButton);
 		expect(await result.findByText('Horarios')).toBeInTheDocument();
 	});
 });

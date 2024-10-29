@@ -28,8 +28,8 @@ describe('Restaurants', () => {
 
 		expect(await result.findByAltText('chilaquiles')).toBeInTheDocument();
 
-		const slideButtonsNext = result.getAllByAltText('next');
-		fireEvent.click(slideButtonsNext[0]);
+		const [slideButtonNext] = result.getAllByAltText('next');
+		fireEvent.click(slideButtonNext);
 
 		expect(await result.findByAltText('carlota')).toBeInTheDocument();
 	});
